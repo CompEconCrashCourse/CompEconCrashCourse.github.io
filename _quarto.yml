@@ -8,17 +8,24 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - text: Julia Lectures
+        menu:
+          - text: "Lecture 1"
+            href: Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb
+          - text: "Lecture 2"
+            href: Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb
+          - text: "Lecture 3"
+            href: Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb
+          - text: "Lecture 4"
+            href: Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb
+          - text: "Lecture 5"
+            href: Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb
       - text: Assignments
-        menu:
-          - assignments/Assignment-1.qmd
-          - assignments/Assignment-2.qmd
-          - assignments/Assignment-3.ipynb
-          - assignments/Assignment-4.qmd
-          - assignments/Assignment-5.qmd
-          - assignments/Assignment-6.qmd
-      - text: Examples
-        menu:
-          - examples/LeastSquaresClustering.qmd
+        menu: 
+          - text: "Assignment 1"
+            href: Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb
+          - text: "Assignment 2"
+            href: Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb
 
 format:
   html:

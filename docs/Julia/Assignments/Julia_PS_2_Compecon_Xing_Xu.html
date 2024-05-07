@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CompEconUMN2024 - Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)</title>
+<title>CompEconUMN2024 - Question 2.1: Adding labor supply to the model.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +101,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">CompEconUMN2024</span>
     </a>
   </div>
@@ -89,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -98,23 +161,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-julia-lectures">    
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 5</span></a>
   </li>  
     </ul>
@@ -125,11 +188,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-assignments">    
         <li>
-    <a class="dropdown-item" href="./Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Assignment 2</span></a>
   </li>  
     </ul>
@@ -150,15 +213,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a>
-  <ul class="collapse">
-  <li><a href="#identification-credible-inference-and-marschaks-maxim" id="toc-identification-credible-inference-and-marschaks-maxim" class="nav-link" data-scroll-target="#identification-credible-inference-and-marschaks-maxim">Identification, Credible Inference, and Marschak’s Maxim</a></li>
-  <li><a href="#dynamic-discrete-choice" id="toc-dynamic-discrete-choice" class="nav-link" data-scroll-target="#dynamic-discrete-choice">Dynamic Discrete Choice</a></li>
-  <li><a href="#estimation-of-dynamic-models-with-unobserved-heterogeneity" id="toc-estimation-of-dynamic-models-with-unobserved-heterogeneity" class="nav-link" data-scroll-target="#estimation-of-dynamic-models-with-unobserved-heterogeneity">Estimation of Dynamic Models with Unobserved Heterogeneity</a></li>
-  <li><a href="#identification-of-dynamic-models-with-unobserved-heterogeneity" id="toc-identification-of-dynamic-models-with-unobserved-heterogeneity" class="nav-link" data-scroll-target="#identification-of-dynamic-models-with-unobserved-heterogeneity">Identification of Dynamic Models with Unobserved Heterogeneity</a></li>
-  </ul></li>
-  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
-  <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office Hours</a></li>
+  <li><a href="#solving-the-problem" id="toc-solving-the-problem" class="nav-link active" data-scroll-target="#solving-the-problem">Solving the problem</a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)</h1>
+<h1 class="title">Question 2.1: Adding labor supply to the model.</h1>
 </div>
 
 
@@ -184,87 +239,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to this course! Find details on the syllabus here, and check out the menu to find other materials.</p>
-<p><a href="https://github.com/josephmullins/structural-methods">Here is a link</a> to the git repo for this course, which by cloning is probably the simplest way for you to get access to the data, code, and assignments. I will continue to add materials throughout the course. You may prefer to selectively download these materials.</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
-<section id="identification-credible-inference-and-marschaks-maxim" class="level3">
-<h3 class="anchored" data-anchor-id="identification-credible-inference-and-marschaks-maxim">Identification, Credible Inference, and Marschak’s Maxim</h3>
-<p>2024 is the last year I will make this topic a part of the course.</p>
-<p>We formally define identification and discuss (via examples) what people really mean when they talk about identification and <strong>credible inference</strong>. We use the <strong>Generalized Roy Model</strong> to compare identification via functional form to nonparametric identification.</p>
-<p>We introduce <strong>Marschak’s Maxim</strong> as a guide for doing empirical model-based research.</p>
-<section id="reading" class="level4">
-<h4 class="anchored" data-anchor-id="reading">Reading</h4>
-<p>The two survey articles by <span class="citation" data-cites="Keane2010">@Keane2010</span> (<a href="./papers/KeaneJEP2010.pdf">link</a>) and <span class="citation" data-cites="AngristPischke2010">@AngristPischke2010</span> (<a href="./papers/TheCredibilityRevolutionInEmpiricalEconomics_AngristPischke_JEP_2010.pdf">link</a>) - although aging - provide two important perspectives on the issues of credible inference in economics. <span class="citation" data-cites="LowMeghir2017">@LowMeghir2017</span> <a href="./papers/TheUseOfStructuralModelsInEconometrics_LowMeghir_JEP_2017.pdf">provide</a> a nice review of the advantages of the structural approach.</p>
-<p><a href="./papers/Marschak1953.pdf">The original paper</a> by <span class="citation" data-cites="Marschak1953">@Marschak1953</span> may be of interest. <span class="citation" data-cites="HeckmanVytlacil2007">@HeckmanVytlacil2007</span> provide a <a href="./papers/HeckmanVytlacilHandbook2007.pdf">nice discussion</a> of Marschak’s Maxim in the context of policy evaluation. They introduce <span class="citation" data-cites="HeckmanVytlacil2005 Carneiro2011">[@HeckmanVytlacil2005; @Carneiro2011]</span> the <em>Marginal Treatment Effect</em> as a tool for thinking about quasi-experimental estimators and policy evaluation.</p>
-</section>
-</section>
-<section id="dynamic-discrete-choice" class="level3">
-<h3 class="anchored" data-anchor-id="dynamic-discrete-choice">Dynamic Discrete Choice</h3>
-<p>We introduce the dynamic discrete choice model and briefly discuss identification when all persistent state variables are observed. We review some of the basics of discrete choice such as the generalized extreme value distribution, which produces tractable choice probabilities with relatively flexible cross-price elasticities.</p>
-<section id="reading-1" class="level4">
-<h4 class="anchored" data-anchor-id="reading-1">Reading</h4>
-<p>The main example that we work with throughout the course can be found in <span class="citation" data-cites="Mullins2022">@Mullins2022</span> (<a href="./papers/DesigningCashTransfers_Children_Draft.pdf]">pdf</a>).</p>
-<p><span class="citation" data-cites="Rust1987">@Rust1987</span> is the canonical example demonstrating estimation of dynamic discrete choice models with maximum likelihood and a nested solution method.</p>
-<p>We show that if one can directly estimate choice probabilities, several tractable approaches produce estimates of structural parameters without repeatedly solving the model. These include <span class="citation" data-cites="Hotz1993">@Hotz1993</span>, <span class="citation" data-cites="AgMira2002">@AgMira2002</span>, <span class="citation" data-cites="Aguirregabiria2007">@Aguirregabiria2007</span>, <span class="citation" data-cites="Pesendorfer2008">@Pesendorfer2008</span>, and <span class="citation" data-cites="Arcidiacono2011">@Arcidiacono2011</span>. We will review these methods and why they are not appropriate to use in <span class="citation" data-cites="Mullins2022">@Mullins2022</span>.</p>
-</section>
-</section>
-<section id="estimation-of-dynamic-models-with-unobserved-heterogeneity" class="level3">
-<h3 class="anchored" data-anchor-id="estimation-of-dynamic-models-with-unobserved-heterogeneity">Estimation of Dynamic Models with Unobserved Heterogeneity</h3>
-<p>Using <span class="citation" data-cites="Mullins2022">@Mullins2022</span> as an example, we talk about the inferential pitfalls that can occur when models fail to account for <strong>unobserved heterogeneity</strong>. We briefly discuss how this can depend on estimation approaches and sources of identification.</p>
-<p>We review methods for estimation of dynamic models, including the <strong>Expectation-Maximization</strong> algorithm (EM) (see, e.g. <span class="citation" data-cites="Arcidiacono2011">@Arcidiacono2011</span>) and the <strong>clustering</strong> approach of <span class="citation" data-cites="Manresa2015">@Manresa2015</span>. We review practical considerations for these approaches and introduce the <strong>Forward-Back algorithm</strong> for implementing <strong>EM</strong> in hidden Markov Models with <strong>time-varying unobserved state variables</strong>. We introduce a sparse matrix implementation of this algorithm.</p>
-</section>
-<section id="identification-of-dynamic-models-with-unobserved-heterogeneity" class="level3">
-<h3 class="anchored" data-anchor-id="identification-of-dynamic-models-with-unobserved-heterogeneity">Identification of Dynamic Models with Unobserved Heterogeneity</h3>
-<p>We discuss how either <strong>panel data</strong> or <strong>instrumental variables</strong> can facilitate identification of models with unobserved heterogeneity, and briefly review identification results for finite mixtures in panel data settings due to <span class="citation" data-cites="kasahara2009">@kasahara2009</span> and <span class="citation" data-cites="bonhomme2016estimating">@bonhomme2016estimating</span>. <span class="citation" data-cites="berry2023">@berry2023</span> analyze identification and estimation of dynamic models with persistent heterogeneity using instrumental variables.</p>
-</section>
-</section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<p>There will be 7 problem sets. Your best 5 of these 7 problem sets will be worth 20%. Hence, you can skip two if you want.</p>
-<p>Here is the proposed timeline of due dates. Submissions <strong>must</strong> be made through Canvas as a notebook (e.g.&nbsp;jupyter or quarto) formatted to html with printed output.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Assignment</th>
-<th>Due Date</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="assignments/Assignment-1.qmd">Assignment 1</a></td>
-<td>March 22</td>
-</tr>
-<tr class="even">
-<td><a href="assignments/Assignment-2.qmd">Assignment 2</a></td>
-<td>March 29</td>
-</tr>
-<tr class="odd">
-<td><a href="assignments/Assignment-3.ipynb">Assignment 3</a></td>
-<td>April 5</td>
-</tr>
-<tr class="even">
-<td><a href="assignments/Assignment-4.qmd">Assignment 4</a></td>
-<td>April 12</td>
-</tr>
-<tr class="odd">
-<td><a href="assignments/Assignment-5.qmd">Assignment 5</a></td>
-<td><del>April 19</del> April 26</td>
-</tr>
-<tr class="even">
-<td><a href="assignments/Assignment-6.qmd">Assignment 6</a></td>
-<td><del>April 26</del> May 3</td>
-</tr>
-<tr class="odd">
-<td>Assignment 7</td>
-<td><del>May 3</del> May 10</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="office-hours" class="level2">
-<h2 class="anchored" data-anchor-id="office-hours">Office Hours</h2>
-<p>I will provide a link on Canvas to sign up for my weekly office hours.</p>
+<p>One natural extension to the problem is to add preferences for leisure to characterize labor supply changes.</p>
+<p>Denote the labor supply as <span class="math inline">\(l_t\)</span>. For simplicity, let household has 1 unit of labor endowment each period. Leisure can thus be denoted as <span class="math inline">\(1 - l_t\)</span>. Now, consider the following problem:</p>
+<p><span class="math display">\[\begin{align*}
+    V(k_0) \equiv \max_{\{c_t, l_t, k_{t+1}\}_{t=0}^\infty} &amp;\sum_{t=0}^\infty \beta^t u(c_t, 1 - l_t) \\
+    \text{subject to } c_t + k_{t+1} &amp;\leq F(k_t, l_t) + (1 - \delta) k_t, \forall t\\
+    c_t, k_{t+1} \geq 0,&amp; l_t \in [0,1], \forall t \\
+       \quad k_0 &amp;\text{ given }
+\end{align*}\]</span></p>
+<p>Let the utility be denoted as:</p>
+<p><strong>Exercise</strong>: Find the Euler equation as before. What changed? In addition, use the FOCs from <span class="math inline">\(c_t\)</span> and <span class="math inline">\(l_t\)</span> to characterize the intratemporal substitution between consumption and leisure. Make some economic justifications for the results.</p>
+<p>The recursive formulation of the problem is:</p>
+<p><span class="math display">\[\begin{align*}
+    V(k) = &amp; \max_{c,l, k'} \{u(c, 1 - l) + \beta V(k') \}\\
+    \text{subject to } &amp; c + k' \leq F(k, l) + (1 - \delta) k\\
+    &amp; c , k' \geq 0, l \in [0, 1]
+\end{align*}\]</span></p>
+<p>Again, we can substitute in <span class="math inline">\(c\)</span> and write the problem as the following,</p>
+<p><span class="math display">\[
+V(k) =  \max_{l, k' \in \Gamma(k)} \{u(F(k, l) + (1 - \delta) k - k', 1 - l) + \beta V(k')\}
+\]</span> where <span class="math inline">\(\Gamma(k) \equiv \{k', l | l \in [0,1], k' \in [0, F(k, l) + (1 - \delta) k]\}\)</span></p>
+<section id="solving-the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="solving-the-problem">Solving the problem</h3>
+<p>Let’s specify some parameter values as before. Again we take use of <code>struct</code>.</p>
+<div id="cell-4" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Base</span>.<span class="pp">@kwdef</span> <span class="kw">struct</span> Household_labor <span class="co"># or simply @kwdef</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    σ <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">2.0</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    β <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    A <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">2.0</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    α <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    δ <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    γ <span class="op">::</span><span class="dt"> Float64 </span><span class="op">=</span> <span class="fl">0.3</span> <span class="co"># additional parameter for the utility weight between consumption and leisure</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>h_l <span class="op">=</span> <span class="fu">Household</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>Household(2.0, 0.9, 2.0, 0.7, 0.9)</code></pre>
+</div>
+</div>
+<p>In addition, we need to specify the utility function and the production function. We use a separable CRRA utility for consumption and leisure. Production function is the same.</p>
+<div id="cell-6" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">u2</span>(c,l, m) <span class="op">=</span> γ <span class="op">*</span> c<span class="op">^</span>(<span class="fl">1.0</span> <span class="op">-</span> m.σ)<span class="op">/</span>(<span class="fl">1.0</span> <span class="op">-</span> m.σ) <span class="op">+</span> (<span class="fl">1.0</span> <span class="op">-</span> γ) <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> l)<span class="op">^</span>(<span class="fl">1.0</span> <span class="op">-</span> m.σ)<span class="op">/</span>(<span class="fl">1.0</span> <span class="op">-</span> m.σ)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">F2</span>(k,l, m) <span class="op">=</span> m.A <span class="op">*</span> k<span class="op">^</span>m.α <span class="op">*</span> l<span class="op">^</span>(<span class="fl">1.0</span> <span class="op">-</span> m.α)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>F2 (generic function with 1 method)</code></pre>
+</div>
+</div>
+<p>Let’s build towards solving the model. First, note that the maximum sustainable capital is the same as before. Again, <span class="math inline">\(F(\tilde{k}, 1) = \delta \tilde{k}\)</span>, which is <span class="math inline">\(A \tilde{k}^\alpha = \delta \tilde{k}\)</span>. Since <span class="math inline">\(\delta &gt; 0\)</span>, <span class="math inline">\(\tilde{k} = (\frac{A}{\delta})^{\frac{1}{1 - \alpha}}\)</span>. Intuitively, this is because that if we let consumption be <span class="math inline">\(0\)</span> and use all labor endowment for production. The maximum sustainable level for capital in the long term will be when <span class="math inline">\(F(\tilde{k}, 1) = \delta \tilde{k}\)</span>.</p>
+<p>Everything else basically follows, except that we also need to find optimal labor supply (or leisure). There are two ways to do this. You will write the codes for VFI with the algorithms provided below. Try to write all codes by yourself and check with the basic model without labor supply decisions in the lecture.</p>
+<p>The brute force way of solving this starts with constructing an additional grid for labor and search over maximized value with different combinations of <span class="math inline">\(k'\)</span> and <span class="math inline">\(l\)</span>. Since <span class="math inline">\(l \in [0,1]\)</span>, we can initialize <span class="math inline">\(l\)</span> with <code>range(0.0, 1.0, 10)</code> (10 grids for simplicity).</p>
+<p>The algorithm is very similar to that in the lecture. We need an additional loop over possible values of <span class="math inline">\(l\)</span>. You will also need two policy functions, <code>pol_kprime</code> for storing optimal policy index for <span class="math inline">\(k'\)</span> and <span class="math inline">\(pol_l\)</span> for <span class="math inline">\(l\)</span>. For each combination of <span class="math inline">\(k'\)</span> and <span class="math inline">\(l\)</span>, compute <span class="math inline">\(c\)</span> and check whether it is non-negative.</p>
+<p><strong>Exercise:</strong> Write the function for performing VFI for the new model. Write the loop version first. After that, plot the value function and the policy function for <span class="math inline">\(k'\)</span> and <span class="math inline">\(l\)</span> given each <span class="math inline">\(k\)</span>.</p>
+<p><strong>Think:</strong> does the trick with strictly increasing policy function we used in the lecture still apply here? If so how can we implement it?</p>
+<p><strong>Exercise:</strong> Vectorize your code as in the lecture. (partially first and try full vectorization if you are confident) Check with the result from the loop version.</p>
 
 
 </section>
