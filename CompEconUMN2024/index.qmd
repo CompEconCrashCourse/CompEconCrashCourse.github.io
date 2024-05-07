@@ -1,0 +1,68 @@
+---
+title: "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)"
+Author: "Adam A. Oppenheimer & Xing Xu"
+# bibliography: CourseBibliography.bib
+---
+
+Welcome to this course! Find details on the syllabus here, and check out the menu to find other materials.
+
+[Here is a link](https://github.com/josephmullins/structural-methods) to the git repo for this course, which by cloning is probably the simplest way for you to get access to the data, code, and assignments. I will continue to add materials throughout the course. You may prefer to selectively download these materials.
+
+## Topics
+
+### Identification, Credible Inference, and Marschak's Maxim
+
+2024 is the last year I will make this topic a part of the course.
+
+We formally define identification and discuss (via examples) what people really mean when they talk about identification and **credible inference**. We use the **Generalized Roy Model** to compare identification via functional form to nonparametric identification.
+
+We introduce **Marschak's Maxim** as a guide for doing empirical model-based research.
+
+#### Reading
+
+The two survey articles by @Keane2010 ([link](/papers/KeaneJEP2010.pdf)) and @AngristPischke2010 ([link](/papers/TheCredibilityRevolutionInEmpiricalEconomics_AngristPischke_JEP_2010.pdf)) -  although aging - provide two important perspectives on the issues of credible inference in economics. @LowMeghir2017 [provide](/papers/TheUseOfStructuralModelsInEconometrics_LowMeghir_JEP_2017.pdf) a nice review of the advantages of the structural approach.
+
+[The original paper](/papers/Marschak1953.pdf) by @Marschak1953 may be of interest. @HeckmanVytlacil2007 provide a [nice discussion](/papers/HeckmanVytlacilHandbook2007.pdf) of Marschak's Maxim in the context of policy evaluation. They introduce [@HeckmanVytlacil2005; @Carneiro2011] the *Marginal Treatment Effect* as a tool for thinking about quasi-experimental estimators and policy evaluation.
+
+### Dynamic Discrete Choice
+
+We introduce the dynamic discrete choice model and briefly discuss identification when all persistent state variables are observed. We review some of the basics of discrete choice such as the generalized extreme value distribution, which produces tractable choice probabilities with relatively flexible cross-price elasticities.
+
+#### Reading
+
+The main example that we work with throughout the course can be found in @Mullins2022 ([pdf](/papers/DesigningCashTransfers_Children_Draft.pdf])). 
+
+@Rust1987 is the canonical example demonstrating estimation of dynamic discrete choice models with maximum likelihood and a nested solution method. 
+
+We show that if one can directly estimate choice probabilities, several tractable approaches produce estimates of structural parameters without repeatedly solving the model. These include @Hotz1993, @AgMira2002, @Aguirregabiria2007, @Pesendorfer2008, and @Arcidiacono2011. We will review these methods and why they are not appropriate to use in @Mullins2022.
+
+### Estimation of Dynamic Models with Unobserved Heterogeneity
+
+Using @Mullins2022 as an example, we talk about the inferential pitfalls that can occur when models fail to account for **unobserved heterogeneity**. We briefly discuss how this can depend on estimation approaches and sources of identification.
+
+We review methods for estimation of dynamic models, including the **Expectation-Maximization** algorithm (EM) (see, e.g. @Arcidiacono2011) and the **clustering** approach of @Manresa2015. We review practical considerations for these approaches and introduce the **Forward-Back algorithm** for implementing **EM** in hidden Markov Models with **time-varying unobserved state variables**. We introduce a sparse matrix implementation of this algorithm.
+
+
+### Identification of Dynamic Models with Unobserved Heterogeneity
+
+We discuss how either **panel data** or **instrumental variables** can facilitate identification of models with unobserved heterogeneity, and briefly review identification results for finite mixtures in panel data settings due to @kasahara2009 and @bonhomme2016estimating. @berry2023 analyze identification and estimation of dynamic models with persistent heterogeneity using instrumental variables.
+
+## Assessment
+
+There will be 7 problem sets. Your best 5 of these 7 problem sets will be worth 20%. Hence, you can skip two if you want. 
+
+Here is the proposed timeline of due dates. Submissions **must** be made through Canvas as a notebook (e.g. jupyter or quarto) formatted to html with printed output. 
+
+| Assignment | Due Date |
+| ---------- | -------- |
+| [Assignment 1](assignments/Assignment-1.qmd) | March 22 |
+| [Assignment 2](assignments/Assignment-2.qmd) | March 29 | 
+| [Assignment 3](assignments/Assignment-3.ipynb) | April 5 | 
+| [Assignment 4](assignments/Assignment-4.qmd) | April 12 | 
+| [Assignment 5](assignments/Assignment-5.qmd) | ~~April 19~~ April 26 | 
+| [Assignment 6](assignments/Assignment-6.qmd) | ~~April 26~~ May 3 | 
+| Assignment 7 | ~~May 3~~ May 10 | 
+
+## Office Hours
+
+I will provide a link on Canvas to sign up for my weekly office hours.

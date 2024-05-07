@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "",
+    "text": "Welcome to this course! Find details on the syllabus here, and check out the menu to find other materials.\nHere is a link to the git repo for this course, which by cloning is probably the simplest way for you to get access to the data, code, and assignments. I will continue to add materials throughout the course. You may prefer to selectively download these materials."
+  },
+  {
+    "objectID": "index.html#topics",
+    "href": "index.html#topics",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "Topics",
+    "text": "Topics\n\nIdentification, Credible Inference, and Marschak’s Maxim\n2024 is the last year I will make this topic a part of the course.\nWe formally define identification and discuss (via examples) what people really mean when they talk about identification and credible inference. We use the Generalized Roy Model to compare identification via functional form to nonparametric identification.\nWe introduce Marschak’s Maxim as a guide for doing empirical model-based research.\n\nReading\nThe two survey articles by @Keane2010 (link) and @AngristPischke2010 (link) - although aging - provide two important perspectives on the issues of credible inference in economics. @LowMeghir2017 provide a nice review of the advantages of the structural approach.\nThe original paper by @Marschak1953 may be of interest. @HeckmanVytlacil2007 provide a nice discussion of Marschak’s Maxim in the context of policy evaluation. They introduce [@HeckmanVytlacil2005; @Carneiro2011] the Marginal Treatment Effect as a tool for thinking about quasi-experimental estimators and policy evaluation.\n\n\n\nDynamic Discrete Choice\nWe introduce the dynamic discrete choice model and briefly discuss identification when all persistent state variables are observed. We review some of the basics of discrete choice such as the generalized extreme value distribution, which produces tractable choice probabilities with relatively flexible cross-price elasticities.\n\nReading\nThe main example that we work with throughout the course can be found in @Mullins2022 (pdf).\n@Rust1987 is the canonical example demonstrating estimation of dynamic discrete choice models with maximum likelihood and a nested solution method.\nWe show that if one can directly estimate choice probabilities, several tractable approaches produce estimates of structural parameters without repeatedly solving the model. These include @Hotz1993, @AgMira2002, @Aguirregabiria2007, @Pesendorfer2008, and @Arcidiacono2011. We will review these methods and why they are not appropriate to use in @Mullins2022.\n\n\n\nEstimation of Dynamic Models with Unobserved Heterogeneity\nUsing @Mullins2022 as an example, we talk about the inferential pitfalls that can occur when models fail to account for unobserved heterogeneity. We briefly discuss how this can depend on estimation approaches and sources of identification.\nWe review methods for estimation of dynamic models, including the Expectation-Maximization algorithm (EM) (see, e.g. @Arcidiacono2011) and the clustering approach of @Manresa2015. We review practical considerations for these approaches and introduce the Forward-Back algorithm for implementing EM in hidden Markov Models with time-varying unobserved state variables. We introduce a sparse matrix implementation of this algorithm.\n\n\nIdentification of Dynamic Models with Unobserved Heterogeneity\nWe discuss how either panel data or instrumental variables can facilitate identification of models with unobserved heterogeneity, and briefly review identification results for finite mixtures in panel data settings due to @kasahara2009 and @bonhomme2016estimating. @berry2023 analyze identification and estimation of dynamic models with persistent heterogeneity using instrumental variables."
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "Assessment",
+    "text": "Assessment\nThere will be 7 problem sets. Your best 5 of these 7 problem sets will be worth 20%. Hence, you can skip two if you want.\nHere is the proposed timeline of due dates. Submissions must be made through Canvas as a notebook (e.g. jupyter or quarto) formatted to html with printed output.\n\n\n\nAssignment\nDue Date\n\n\n\n\nAssignment 1\nMarch 22\n\n\nAssignment 2\nMarch 29\n\n\nAssignment 3\nApril 5\n\n\nAssignment 4\nApril 12\n\n\nAssignment 5\nApril 19 April 26\n\n\nAssignment 6\nApril 26 May 3\n\n\nAssignment 7\nMay 3 May 10"
+  },
+  {
+    "objectID": "index.html#office-hours",
+    "href": "index.html#office-hours",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "Office Hours",
+    "text": "Office Hours\nI will provide a link on Canvas to sign up for my weekly office hours."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
