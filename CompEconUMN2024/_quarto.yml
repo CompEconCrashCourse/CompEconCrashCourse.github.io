@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "CompEconUMN2024"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Assignments
+        menu:
+          - assignments/Assignment-1.qmd
+          - assignments/Assignment-2.qmd
+          - assignments/Assignment-3.ipynb
+          - assignments/Assignment-4.qmd
+          - assignments/Assignment-5.qmd
+          - assignments/Assignment-6.qmd
+      - text: Examples
+        menu:
+          - examples/LeastSquaresClustering.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
