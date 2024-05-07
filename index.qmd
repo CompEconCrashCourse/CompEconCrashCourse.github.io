@@ -4,65 +4,51 @@ Author: "Adam A. Oppenheimer & Xing Xu"
 # bibliography: CourseBibliography.bib
 ---
 
-Welcome to this course! Find details on the syllabus here, and check out the menu to find other materials.
+Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below. 
 
-[Here is a link](https://github.com/josephmullins/structural-methods) to the git repo for this course, which by cloning is probably the simplest way for you to get access to the data, code, and assignments. I will continue to add materials throughout the course. You may prefer to selectively download these materials.
+All the notebooks for lectures and assignments can be downloaded from [Github repo](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io). 
 
-## Topics
+## Introduction
 
-### Identification, Credible Inference, and Marschak's Maxim
+## Schedule
 
-2024 is the last year I will make this topic a part of the course.
+The class will last three weeks from ***June 3rd - June 21st, 2024***. There will be 6 lectures and accompanied problem sets for each language.
 
-We formally define identification and discuss (via examples) what people really mean when they talk about identification and **credible inference**. We use the **Generalized Roy Model** to compare identification via functional form to nonparametric identification.
+Here is the proposed timeline of the lectures. 
 
-We introduce **Marschak's Maxim** as a guide for doing empirical model-based research.
-
-#### Reading
-
-The two survey articles by @Keane2010 ([link](/papers/KeaneJEP2010.pdf)) and @AngristPischke2010 ([link](/papers/TheCredibilityRevolutionInEmpiricalEconomics_AngristPischke_JEP_2010.pdf)) -  although aging - provide two important perspectives on the issues of credible inference in economics. @LowMeghir2017 [provide](/papers/TheUseOfStructuralModelsInEconometrics_LowMeghir_JEP_2017.pdf) a nice review of the advantages of the structural approach.
-
-[The original paper](/papers/Marschak1953.pdf) by @Marschak1953 may be of interest. @HeckmanVytlacil2007 provide a [nice discussion](/papers/HeckmanVytlacilHandbook2007.pdf) of Marschak's Maxim in the context of policy evaluation. They introduce [@HeckmanVytlacil2005; @Carneiro2011] the *Marginal Treatment Effect* as a tool for thinking about quasi-experimental estimators and policy evaluation.
-
-### Dynamic Discrete Choice
-
-We introduce the dynamic discrete choice model and briefly discuss identification when all persistent state variables are observed. We review some of the basics of discrete choice such as the generalized extreme value distribution, which produces tractable choice probabilities with relatively flexible cross-price elasticities.
-
-#### Reading
-
-The main example that we work with throughout the course can be found in @Mullins2022 ([pdf](/papers/DesigningCashTransfers_Children_Draft.pdf])). 
-
-@Rust1987 is the canonical example demonstrating estimation of dynamic discrete choice models with maximum likelihood and a nested solution method. 
-
-We show that if one can directly estimate choice probabilities, several tractable approaches produce estimates of structural parameters without repeatedly solving the model. These include @Hotz1993, @AgMira2002, @Aguirregabiria2007, @Pesendorfer2008, and @Arcidiacono2011. We will review these methods and why they are not appropriate to use in @Mullins2022.
-
-### Estimation of Dynamic Models with Unobserved Heterogeneity
-
-Using @Mullins2022 as an example, we talk about the inferential pitfalls that can occur when models fail to account for **unobserved heterogeneity**. We briefly discuss how this can depend on estimation approaches and sources of identification.
-
-We review methods for estimation of dynamic models, including the **Expectation-Maximization** algorithm (EM) (see, e.g. @Arcidiacono2011) and the **clustering** approach of @Manresa2015. We review practical considerations for these approaches and introduce the **Forward-Back algorithm** for implementing **EM** in hidden Markov Models with **time-varying unobserved state variables**. We introduce a sparse matrix implementation of this algorithm.
-
-
-### Identification of Dynamic Models with Unobserved Heterogeneity
-
-We discuss how either **panel data** or **instrumental variables** can facilitate identification of models with unobserved heterogeneity, and briefly review identification results for finite mixtures in panel data settings due to @kasahara2009 and @bonhomme2016estimating. @berry2023 analyze identification and estimation of dynamic models with persistent heterogeneity using instrumental variables.
-
-## Assessment
-
-There will be 7 problem sets. Your best 5 of these 7 problem sets will be worth 20%. Hence, you can skip two if you want. 
-
-Here is the proposed timeline of due dates. Submissions **must** be made through Canvas as a notebook (e.g. jupyter or quarto) formatted to html with printed output. 
-
-| Assignment | Due Date |
+| Julia Lectures | Dates |
 | ---------- | -------- |
-| [Assignment 1](assignments/Assignment-1.qmd) | March 22 |
-| [Assignment 2](assignments/Assignment-2.qmd) | March 29 | 
-| [Assignment 3](assignments/Assignment-3.ipynb) | April 5 | 
-| [Assignment 4](assignments/Assignment-4.qmd) | April 12 | 
-| [Assignment 5](assignments/Assignment-5.qmd) | ~~April 19~~ April 26 | 
-| [Assignment 6](assignments/Assignment-6.qmd) | ~~April 26~~ May 3 | 
-| Assignment 7 | ~~May 3~~ May 10 | 
+| [Lecture 1](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | June 4th 9:30 am - 11:00 am CDT |
+| [Lecture 2](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | June 6th 9:30 am - 11:00 am CDT |
+| [Lecture 3](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | June 11th 9:30 am - 11:00 am CDT |
+| [Lecture 4](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | June 13th 9:30 am - 11:00 am CDT |
+| [Lecture 5](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | June 18th 9:30 am - 11:00 am CDT |
+| Lecture 6 | June 20th 9:30 - 11:00 am CDT | 
+
+| Python Lectures | Dates |
+| ---------- | -------- |
+| Lecture 1 | June 3th 9:30 am - 11:00 am CDT |
+| Lecture 2 | June 5th 9:30 am - 11:00 am CDT |
+| Lecture 3 | June 10th 9:30 am - 11:00 am CDT |
+| Lecture 4 | June 12th 9:30 am - 11:00 am CDT |
+| Lecture 5 | June 17th 9:30 am - 11:00 am CDT |
+| Lecture 6 | June 19th 9:30 am - 11:00 am CDT | 
 
 ## Office Hours
 
-I will provide a link on Canvas to sign up for my weekly office hours.
+We will provide links to sign up for weekly office hours.
+
+## Topics
+
+The courses will have different focuses, with the Julia lectures focusing more on computational methods and their implementations on different types of classic economic models and the Python lectures focusing on programming basics, building up fundamental tools that will culminate in solving simple dynamic programming models. Nevertheless, the classes will be complementary to each other as the skills learned can be applied to any programming languages.
+
+The classes are designed to be introductory, with no prior knowledge on programming required.
+
+### Julia
+
+The 6 Julia lectures are arranged as follows:
+
+### Python
+
+
+## Resources for further studies

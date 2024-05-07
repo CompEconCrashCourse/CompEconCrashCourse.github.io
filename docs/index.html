@@ -150,15 +150,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a>
-  <ul class="collapse">
-  <li><a href="#identification-credible-inference-and-marschaks-maxim" id="toc-identification-credible-inference-and-marschaks-maxim" class="nav-link" data-scroll-target="#identification-credible-inference-and-marschaks-maxim">Identification, Credible Inference, and Marschak’s Maxim</a></li>
-  <li><a href="#dynamic-discrete-choice" id="toc-dynamic-discrete-choice" class="nav-link" data-scroll-target="#dynamic-discrete-choice">Dynamic Discrete Choice</a></li>
-  <li><a href="#estimation-of-dynamic-models-with-unobserved-heterogeneity" id="toc-estimation-of-dynamic-models-with-unobserved-heterogeneity" class="nav-link" data-scroll-target="#estimation-of-dynamic-models-with-unobserved-heterogeneity">Estimation of Dynamic Models with Unobserved Heterogeneity</a></li>
-  <li><a href="#identification-of-dynamic-models-with-unobserved-heterogeneity" id="toc-identification-of-dynamic-models-with-unobserved-heterogeneity" class="nav-link" data-scroll-target="#identification-of-dynamic-models-with-unobserved-heterogeneity">Identification of Dynamic Models with Unobserved Heterogeneity</a></li>
-  </ul></li>
-  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
   <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office Hours</a></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a>
+  <ul class="collapse">
+  <li><a href="#julia" id="toc-julia" class="nav-link" data-scroll-target="#julia">Julia</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  </ul></li>
+  <li><a href="#resources-for-further-studies" id="toc-resources-for-further-studies" class="nav-link" data-scroll-target="#resources-for-further-studies">Resources for further studies</a></li>
   </ul>
 </nav>
     </div>
@@ -184,87 +184,102 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to this course! Find details on the syllabus here, and check out the menu to find other materials.</p>
-<p><a href="https://github.com/josephmullins/structural-methods">Here is a link</a> to the git repo for this course, which by cloning is probably the simplest way for you to get access to the data, code, and assignments. I will continue to add materials throughout the course. You may prefer to selectively download these materials.</p>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
-<section id="identification-credible-inference-and-marschaks-maxim" class="level3">
-<h3 class="anchored" data-anchor-id="identification-credible-inference-and-marschaks-maxim">Identification, Credible Inference, and Marschak’s Maxim</h3>
-<p>2024 is the last year I will make this topic a part of the course.</p>
-<p>We formally define identification and discuss (via examples) what people really mean when they talk about identification and <strong>credible inference</strong>. We use the <strong>Generalized Roy Model</strong> to compare identification via functional form to nonparametric identification.</p>
-<p>We introduce <strong>Marschak’s Maxim</strong> as a guide for doing empirical model-based research.</p>
-<section id="reading" class="level4">
-<h4 class="anchored" data-anchor-id="reading">Reading</h4>
-<p>The two survey articles by <span class="citation" data-cites="Keane2010">@Keane2010</span> (<a href="./papers/KeaneJEP2010.pdf">link</a>) and <span class="citation" data-cites="AngristPischke2010">@AngristPischke2010</span> (<a href="./papers/TheCredibilityRevolutionInEmpiricalEconomics_AngristPischke_JEP_2010.pdf">link</a>) - although aging - provide two important perspectives on the issues of credible inference in economics. <span class="citation" data-cites="LowMeghir2017">@LowMeghir2017</span> <a href="./papers/TheUseOfStructuralModelsInEconometrics_LowMeghir_JEP_2017.pdf">provide</a> a nice review of the advantages of the structural approach.</p>
-<p><a href="./papers/Marschak1953.pdf">The original paper</a> by <span class="citation" data-cites="Marschak1953">@Marschak1953</span> may be of interest. <span class="citation" data-cites="HeckmanVytlacil2007">@HeckmanVytlacil2007</span> provide a <a href="./papers/HeckmanVytlacilHandbook2007.pdf">nice discussion</a> of Marschak’s Maxim in the context of policy evaluation. They introduce <span class="citation" data-cites="HeckmanVytlacil2005 Carneiro2011">[@HeckmanVytlacil2005; @Carneiro2011]</span> the <em>Marginal Treatment Effect</em> as a tool for thinking about quasi-experimental estimators and policy evaluation.</p>
+<p>Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below.</p>
+<p>All the notebooks for lectures and assignments can be downloaded from <a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io">Github repo</a>.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 </section>
-</section>
-<section id="dynamic-discrete-choice" class="level3">
-<h3 class="anchored" data-anchor-id="dynamic-discrete-choice">Dynamic Discrete Choice</h3>
-<p>We introduce the dynamic discrete choice model and briefly discuss identification when all persistent state variables are observed. We review some of the basics of discrete choice such as the generalized extreme value distribution, which produces tractable choice probabilities with relatively flexible cross-price elasticities.</p>
-<section id="reading-1" class="level4">
-<h4 class="anchored" data-anchor-id="reading-1">Reading</h4>
-<p>The main example that we work with throughout the course can be found in <span class="citation" data-cites="Mullins2022">@Mullins2022</span> (<a href="./papers/DesigningCashTransfers_Children_Draft.pdf]">pdf</a>).</p>
-<p><span class="citation" data-cites="Rust1987">@Rust1987</span> is the canonical example demonstrating estimation of dynamic discrete choice models with maximum likelihood and a nested solution method.</p>
-<p>We show that if one can directly estimate choice probabilities, several tractable approaches produce estimates of structural parameters without repeatedly solving the model. These include <span class="citation" data-cites="Hotz1993">@Hotz1993</span>, <span class="citation" data-cites="AgMira2002">@AgMira2002</span>, <span class="citation" data-cites="Aguirregabiria2007">@Aguirregabiria2007</span>, <span class="citation" data-cites="Pesendorfer2008">@Pesendorfer2008</span>, and <span class="citation" data-cites="Arcidiacono2011">@Arcidiacono2011</span>. We will review these methods and why they are not appropriate to use in <span class="citation" data-cites="Mullins2022">@Mullins2022</span>.</p>
-</section>
-</section>
-<section id="estimation-of-dynamic-models-with-unobserved-heterogeneity" class="level3">
-<h3 class="anchored" data-anchor-id="estimation-of-dynamic-models-with-unobserved-heterogeneity">Estimation of Dynamic Models with Unobserved Heterogeneity</h3>
-<p>Using <span class="citation" data-cites="Mullins2022">@Mullins2022</span> as an example, we talk about the inferential pitfalls that can occur when models fail to account for <strong>unobserved heterogeneity</strong>. We briefly discuss how this can depend on estimation approaches and sources of identification.</p>
-<p>We review methods for estimation of dynamic models, including the <strong>Expectation-Maximization</strong> algorithm (EM) (see, e.g. <span class="citation" data-cites="Arcidiacono2011">@Arcidiacono2011</span>) and the <strong>clustering</strong> approach of <span class="citation" data-cites="Manresa2015">@Manresa2015</span>. We review practical considerations for these approaches and introduce the <strong>Forward-Back algorithm</strong> for implementing <strong>EM</strong> in hidden Markov Models with <strong>time-varying unobserved state variables</strong>. We introduce a sparse matrix implementation of this algorithm.</p>
-</section>
-<section id="identification-of-dynamic-models-with-unobserved-heterogeneity" class="level3">
-<h3 class="anchored" data-anchor-id="identification-of-dynamic-models-with-unobserved-heterogeneity">Identification of Dynamic Models with Unobserved Heterogeneity</h3>
-<p>We discuss how either <strong>panel data</strong> or <strong>instrumental variables</strong> can facilitate identification of models with unobserved heterogeneity, and briefly review identification results for finite mixtures in panel data settings due to <span class="citation" data-cites="kasahara2009">@kasahara2009</span> and <span class="citation" data-cites="bonhomme2016estimating">@bonhomme2016estimating</span>. <span class="citation" data-cites="berry2023">@berry2023</span> analyze identification and estimation of dynamic models with persistent heterogeneity using instrumental variables.</p>
-</section>
-</section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<p>There will be 7 problem sets. Your best 5 of these 7 problem sets will be worth 20%. Hence, you can skip two if you want.</p>
-<p>Here is the proposed timeline of due dates. Submissions <strong>must</strong> be made through Canvas as a notebook (e.g.&nbsp;jupyter or quarto) formatted to html with printed output.</p>
+<section id="schedule" class="level2">
+<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
+<p>The class will last three weeks from <strong><em>June 3rd - June 21st, 2024</em></strong>. There will be 6 lectures and accompanied problem sets for each language.</p>
+<p>Here is the proposed timeline of the lectures.</p>
 <table class="table">
 <thead>
 <tr class="header">
-<th>Assignment</th>
-<th>Due Date</th>
+<th>Julia Lectures</th>
+<th>Dates</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="assignments/Assignment-1.qmd">Assignment 1</a></td>
-<td>March 22</td>
+<td><a href="./Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">Lecture 1</a></td>
+<td>June 4th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="even">
-<td><a href="assignments/Assignment-2.qmd">Assignment 2</a></td>
-<td>March 29</td>
+<td><a href="./Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">Lecture 2</a></td>
+<td>June 6th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="odd">
-<td><a href="assignments/Assignment-3.ipynb">Assignment 3</a></td>
-<td>April 5</td>
+<td><a href="./Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">Lecture 3</a></td>
+<td>June 11th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="even">
-<td><a href="assignments/Assignment-4.qmd">Assignment 4</a></td>
-<td>April 12</td>
+<td><a href="./Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">Lecture 4</a></td>
+<td>June 13th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="odd">
-<td><a href="assignments/Assignment-5.qmd">Assignment 5</a></td>
-<td><del>April 19</del> April 26</td>
+<td><a href="./Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">Lecture 5</a></td>
+<td>June 18th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="even">
-<td><a href="assignments/Assignment-6.qmd">Assignment 6</a></td>
-<td><del>April 26</del> May 3</td>
+<td>Lecture 6</td>
+<td>June 20th 9:30 - 11:00 am CDT</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Python Lectures</th>
+<th>Dates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lecture 1</td>
+<td>June 3th 9:30 am - 11:00 am CDT</td>
+</tr>
+<tr class="even">
+<td>Lecture 2</td>
+<td>June 5th 9:30 am - 11:00 am CDT</td>
 </tr>
 <tr class="odd">
-<td>Assignment 7</td>
-<td><del>May 3</del> May 10</td>
+<td>Lecture 3</td>
+<td>June 10th 9:30 am - 11:00 am CDT</td>
+</tr>
+<tr class="even">
+<td>Lecture 4</td>
+<td>June 12th 9:30 am - 11:00 am CDT</td>
+</tr>
+<tr class="odd">
+<td>Lecture 5</td>
+<td>June 17th 9:30 am - 11:00 am CDT</td>
+</tr>
+<tr class="even">
+<td>Lecture 6</td>
+<td>June 19th 9:30 am - 11:00 am CDT</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="office-hours" class="level2">
 <h2 class="anchored" data-anchor-id="office-hours">Office Hours</h2>
-<p>I will provide a link on Canvas to sign up for my weekly office hours.</p>
+<p>We will provide links to sign up for weekly office hours.</p>
+</section>
+<section id="topics" class="level2">
+<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<p>The courses will have different focuses, with the Julia lectures focusing more on computational methods and their implementations on different types of classic economic models and the Python lectures focusing on programming basics, building up fundamental tools that will culminate in solving simple dynamic programming models. Nevertheless, the classes will be complementary to each other as the skills learned can be applied to any programming languages.</p>
+<p>The classes are designed to be introductory, with no prior knowledge on programming required.</p>
+<section id="julia" class="level3">
+<h3 class="anchored" data-anchor-id="julia">Julia</h3>
+<p>The 6 Julia lectures are arranged as follows:</p>
+</section>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+</section>
+</section>
+<section id="resources-for-further-studies" class="level2">
+<h2 class="anchored" data-anchor-id="resources-for-further-studies">Resources for further studies</h2>
 
 
 </section>

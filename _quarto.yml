@@ -20,7 +20,7 @@ website:
             href: Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb
           - text: "Lecture 5"
             href: Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb
-      - text: Assignments
+      - text: Julia Assignments
         menu: 
           - text: "Assignment 1"
             href: Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb
