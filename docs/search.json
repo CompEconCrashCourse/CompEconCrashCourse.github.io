@@ -130,13 +130,27 @@
     "href": "index.html#schedule",
     "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
     "section": "Schedule",
-    "text": "Schedule\nThe class will last three weeks from June 3rd - June 21st, 2024. There will be 6 lectures and accompanied problem sets for each language.\nHere is the proposed timeline of the lectures.\n\n\n\nJulia Lectures\nDates\n\n\n\n\nLecture 1\nJune 4th 9:30 am - 11:00 am CDT\n\n\nLecture 2\nJune 6th 9:30 am - 11:00 am CDT\n\n\nLecture 3\nJune 11th 9:30 am - 11:00 am CDT\n\n\nLecture 4\nJune 13th 9:30 am - 11:00 am CDT\n\n\nLecture 5\nJune 18th 9:30 am - 11:00 am CDT\n\n\nLecture 6\nJune 20th 9:30 - 11:00 am CDT\n\n\n\n\n\n\nPython Lectures\nDates\n\n\n\n\nLecture 1\nJune 3th 9:30 am - 11:00 am CDT\n\n\nLecture 2\nJune 5th 9:30 am - 11:00 am CDT\n\n\nLecture 3\nJune 10th 9:30 am - 11:00 am CDT\n\n\nLecture 4\nJune 12th 9:30 am - 11:00 am CDT\n\n\nLecture 5\nJune 17th 9:30 am - 11:00 am CDT\n\n\nLecture 6\nJune 19th 9:30 am - 11:00 am CDT"
+    "text": "Schedule\nThe class will last three weeks from June 3rd - June 21st, 2024. There will be 6 lectures and accompanied problem sets for each language.\nHere is the proposed timeline of the lectures.\n\n\n\nJulia Lectures\nDates\n\n\n\n\nJulia Fundamentals\nJune 4th 9:30 am - 11:00 am CDT\n\n\nNeoclassical growth model (RBC)\nJune 6th 9:30 am - 11:00 am CDT\n\n\nMcCall’s Job search model\nJune 11th 9:30 am - 11:00 am CDT\n\n\nIncomplete market model with heterogeneous household\nJune 13th 9:30 am - 11:00 am CDT\n\n\nFirm dynamics with an example of exporter dynamics\nJune 18th 9:30 am - 11:00 am CDT\n\n\nLecture 6 (topic yet to be decided)\nJune 20th 9:30 - 11:00 am CDT\n\n\n\n(To get started with the Julia lectures, please set up with Quantecon tutorial)\n\n\n\nPython Lectures\nDates\n\n\n\n\nLecture 1\nJune 3th 9:30 am - 11:00 am CDT\n\n\nLecture 2\nJune 5th 9:30 am - 11:00 am CDT\n\n\nLecture 3\nJune 10th 9:30 am - 11:00 am CDT\n\n\nLecture 4\nJune 12th 9:30 am - 11:00 am CDT\n\n\nLecture 5\nJune 17th 9:30 am - 11:00 am CDT\n\n\nLecture 6\nJune 19th 9:30 am - 11:00 am CDT"
   },
   {
     "objectID": "index.html#resources-for-further-studies",
     "href": "index.html#resources-for-further-studies",
     "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
     "section": "Resources for further studies",
-    "text": "Resources for further studies"
+    "text": "Resources for further studies\nThe go-to:\nQuantecon"
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "Course Overview",
+    "text": "Course Overview\nThe course offerings are strategically designed to cater to varying interests and skill levels. The lectures on Julia will primarily concentrate on computational methods, demonstrating their applications across a range of classical economic models. This will involve hands-on practice with coding and implementing algorithms that are pivotal to economic analysis.\nIn contrast, the Python lectures are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, culminating in the ability to tackle simple dynamic programming models. This structured approach ensures a gentle learning curve, making these lectures ideal for those who are just starting their journey in programming.\nBoth courses are structured as introductory, requiring no prior experience in programming. This accessibility is key to encouraging participation among lower year graduate students. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses offered later in the curriculum.\nIt’s important to note that the skills developed in these classes are broadly applicable and will provide a strong foundation for those interested in advancing to more specialized computational sequences. However, students already familiar with basic or intermediate programming may find the pace introductory. Thus, senior students might prefer to direct their attention towards more advanced courses that align with their existing skill levels."
+  },
+  {
+    "objectID": "index.html#assignments",
+    "href": "index.html#assignments",
+    "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
+    "section": "Assignments",
+    "text": "Assignments\nHere are the links to the assignments:\n\n\n\nJulia Assignments\nDue Dates\n\n\n\n\nAssignment 1\nJune 10th\n\n\nAssignment 2\nJune 12th\n\n\nAssignment 3\nJune 17th\n\n\nAssignment 4\nJune 19th\n\n\nAssignment 5\nJune 24th\n\n\nAssignment 6\nJune 26th"
   }
 ]
