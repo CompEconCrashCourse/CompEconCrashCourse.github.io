@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
     "section": "",
-    "text": "Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below.\nAll the notebooks for lectures and assignments can be downloaded from Github repo."
+    "text": "Disclaimer: this site is a work in progress!\nWelcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below.\nAll the notebooks for lectures and assignments can be downloaded from Github repo."
   },
   {
     "objectID": "index.html#topics",
@@ -130,7 +130,7 @@
     "href": "index.html#schedule",
     "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
     "section": "Schedule",
-    "text": "Schedule\nThe class will last three weeks from June 3rd - June 21st, 2024. There will be 6 lectures and accompanied problem sets for each language.\nHere is the proposed timeline of the lectures.\n\n\n\nJulia Lectures\nDates\n\n\n\n\nJulia Fundamentals\nJune 4th 9:30 am - 11:00 am CDT\n\n\nNeoclassical growth model (RBC)\nJune 6th 9:30 am - 11:00 am CDT\n\n\nMcCall’s Job search model\nJune 11th 9:30 am - 11:00 am CDT\n\n\nIncomplete market model with heterogeneous household\nJune 13th 9:30 am - 11:00 am CDT\n\n\nFirm dynamics with an example of exporter dynamics\nJune 18th 9:30 am - 11:00 am CDT\n\n\nLecture 6 (topic yet to be decided)\nJune 20th 9:30 - 11:00 am CDT\n\n\n\n(To get started with the Julia lectures, please set up with Quantecon tutorial)\n\n\n\nPython Lectures\nDates\n\n\n\n\nLecture 1\nJune 3th 9:30 am - 11:00 am CDT\n\n\nLecture 2\nJune 5th 9:30 am - 11:00 am CDT\n\n\nLecture 3\nJune 10th 9:30 am - 11:00 am CDT\n\n\nLecture 4\nJune 12th 9:30 am - 11:00 am CDT\n\n\nLecture 5\nJune 17th 9:30 am - 11:00 am CDT\n\n\nLecture 6\nJune 19th 9:30 am - 11:00 am CDT"
+    "text": "Schedule\nThe class will last three weeks from June 3rd - June 21st, 2024. There will be 6 lectures and accompanied problem sets for each language.\nHere is the proposed timeline of the lectures. All lectures will be from 9:30 am - 11:00 am CDT.\n\n\n\nJulia Lectures\nDates\n\n\n\n\nJulia Fundamentals\nTuesday, June 4th\n\n\nNeoclassical growth model (RBC)\nThursday, June 6th\n\n\nMcCall’s Job search model\nTuesday, June 11th\n\n\nIncomplete market model with heterogeneous household\nThursday, June 13th\n\n\nFirm dynamics with an example of exporter dynamics\nTuesday, June 18th\n\n\nLecture 6 (topic yet to be decided)\nThursday, June 20th\n\n\n\n(To get started with the Julia lectures, please set up with Quantecon tutorial)\n\n\n\nPython Lectures\nDates\n\n\n\n\nBasics: Conditionals, Loops, Functions, etc.\nMonday, June 3rd\n\n\nNesting, Scope, and Lists\nWednesday, June 5th\n\n\nTips & Tricks\nMonday, June 10th\n\n\nClasses and Queues\nWednesday, June 12th\n\n\nNumpy\nMonday, June 17th\n\n\nPandas\nWednesday, June 19th"
   },
   {
     "objectID": "index.html#resources-for-further-studies",
@@ -151,6 +151,216 @@
     "href": "index.html#assignments",
     "title": "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)",
     "section": "Assignments",
-    "text": "Assignments\nHere are the links to the assignments:\n\n\n\nJulia Assignments\nDue Dates\n\n\n\n\nAssignment 1\nJune 10th\n\n\nAssignment 2\nJune 12th\n\n\nAssignment 3\nJune 17th\n\n\nAssignment 4\nJune 19th\n\n\nAssignment 5\nJune 24th\n\n\nAssignment 6\nJune 26th"
+    "text": "Assignments\nHere are the links to the assignments:\n\n\n\nJulia Assignments\nDue Dates\n\n\n\n\nAssignment 1\nJune 10th\n\n\nAssignment 2\nJune 12th\n\n\nAssignment 3\nJune 17th\n\n\nAssignment 4\nJune 19th\n\n\nAssignment 5\nJune 24th\n\n\nAssignment 6\nJune 26th\n\n\n\n\n\n\nPython Assignments\nDue Dates\n\n\n\n\nAssignment 1\nJune 5th\n\n\nAssignment 2\nJune 10th\n\n\nAssignment 3\nJune 12th\n\n\nAssignment 4\nJune 17th\n\n\nAssignment 5\nJune 19th\n\n\nAssignment 6\nJune 24th"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html",
+    "href": "Python/Lectures/lecture1.html",
+    "title": "Lesson 1",
+    "section": "",
+    "text": "Conda\n\nEnvironments\n\nImporting Packages\nVariables\n\nAssignment (using =)\n\n\nNaming\n\n\nTypes (str, int, float, bool, lists/tuples/sets, dicts)\n\n\nLists/tuples/sets and dicts\n\n\n\nFor lists/tuples: subsets, len(), sum(), max(), min(), etc.\n\n\nIf statements\n\nComparisons\n\n\nand and or\n\n\nIndentation\n\nLoops\n\nIndentation\n\n\nFor loops\n\n\nWhile loops\n\n\nBreaks\n\n\nContinue\n\nFunctions\n\nIndentation\n\n\nArguments\n\n\nReturns\n\n\nComments\n\n\n\nDocstrings\n\n\nPrinting text"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#overview",
+    "href": "Python/Lectures/lecture1.html#overview",
+    "title": "Lesson 1",
+    "section": "",
+    "text": "Conda\n\nEnvironments\n\nImporting Packages\nVariables\n\nAssignment (using =)\n\n\nNaming\n\n\nTypes (str, int, float, bool, lists/tuples/sets, dicts)\n\n\nLists/tuples/sets and dicts\n\n\n\nFor lists/tuples: subsets, len(), sum(), max(), min(), etc.\n\n\nIf statements\n\nComparisons\n\n\nand and or\n\n\nIndentation\n\nLoops\n\nIndentation\n\n\nFor loops\n\n\nWhile loops\n\n\nBreaks\n\n\nContinue\n\nFunctions\n\nIndentation\n\n\nArguments\n\n\nReturns\n\n\nComments\n\n\n\nDocstrings\n\n\nPrinting text"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#conda",
+    "href": "Python/Lectures/lecture1.html#conda",
+    "title": "Lesson 1",
+    "section": "Conda",
+    "text": "Conda\nDoes lots of things, we’re using it for package management\n\nEnvironments\nAllows you to keep packages organized - see here\n\nTo create: conda create --name pycourse (you can replace pycourse with any custom name)\nTo activate: conda activate pycourse\nTo install pip: conda install pip\nTo install package: pip install packagename (replace packagename with the name of the package you want to install)\n\nFor this lesson, please install: jupyterlab and/or notebook to be able to open Jupyter Notebooks (like this) (see here for more information)"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#importing-packages",
+    "href": "Python/Lectures/lecture1.html#importing-packages",
+    "title": "Lesson 1",
+    "section": "Importing Packages",
+    "text": "Importing Packages\nType import packagename\n\nimport random\n\n\nprint(random.random())\n\n0.7773242780744012"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#variables",
+    "href": "Python/Lectures/lecture1.html#variables",
+    "title": "Lesson 1",
+    "section": "Variables",
+    "text": "Variables\nWhy - you need to keep track of what’s what\n\nAssignment\nAssign a value to a name using = (this is not equivalent to mathematical equality, check that using ==)\n\nx = 10\nprint(x)\n\n10\n\n\n\n\nNaming\nChoose names carefully\n\nx = 10\ndistance = 10\n\n\n\nTypes\nstr, int, float, bool, lists/tuples/sets, dicts\n\ncourse_name_v1 = 'Python Course, Summer 2023'\ncourse_name_v2 = \"Python Course, Summer 2023\"\ncourse_year = 2023\nlecture_1_frac_complete = 1/5\nlecture_1_complete = False\nlectures = [1, 2, 3, 4, 5, 6, 7, 8]\nlecture_v2 = (1, 2, 3, 4, 5, 6, 7, 8)\nlectures_v3 = {1, 2, 3, 4, 5, 6, 7, 8, 8}\nlectures_occurred = {1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False'}\n\n\n\nLists/tuples/sets and dicts\nLists are mutable (they can be changed) - Access an element using list[index] (indexing starts at 0)\nTuples are immutable (they cannot be changed) - Access an element using tuple[index] (indexing starts at 0)\nSets don’t have an order\nDicts work like a dictionary (a term called a ‘key’ will be linked to an associated variable called a ‘value’) - Access a value using dict[key]\n\nprint(lectures)\nlectures[0] = 0\nprint(lectures)\n\n[1, 2, 3, 4, 5, 6, 7, 8]\n[0, 2, 3, 4, 5, 6, 7, 8]\n\n\n\nprint(lecture_v2)\nlecture_v2[0] = 0\n\n(1, 2, 3, 4, 5, 6, 7, 8)\n\n\nTypeError: 'tuple' object does not support item assignment\n\n\n\nprint(lectures_v3)\nlectures_v3[0] = 0\n\n{1, 2, 3, 4, 5, 6, 7, 8}\n\n\nTypeError: 'set' object does not support item assignment\n\n\n\nlectures_occurred = {1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False'}\nprint(lectures_occurred)\nlectures_occurred[0] = False\nprint(lectures_occurred)\nlectures_occurred['word'] = 'definition'\nprint(lectures_occurred)\n\n{1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False'}\n{1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False', 0: False}\n{1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False', 0: False, 'word': 'definition'}\n\n\n\n\nFor lists/tuples: subsets, len(), sum(), max(), min(), etc.\nAccess a subset of a list/tuple using list[a: b]/tuple[a: b], which gives you the elements starting and index a and ending at index b-1 (remember that indexing starts at 0)\n\nlectures\n\n[0, 2, 3, 4, 5, 6, 7, 8]\n\n\n\nprint('Subset of list:', lectures[2: 4])\nprint('Length of list:', len(lectures))\nprint('Max of tuple:', max(lecture_v2))\nprint('Min of tuple:', min(lecture_v2))\n\nSubset of list: [3, 4]\nLength of list: 8\nMax of tuple: 8\nMin of tuple: 1"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#if-statements",
+    "href": "Python/Lectures/lecture1.html#if-statements",
+    "title": "Lesson 1",
+    "section": "If statements",
+    "text": "If statements\nIf you want a task to occur under certain conditions\n\nComparisons\n\n== for equality\n!= for inequality\n&gt; or &lt; for strict inequality\n&gt;= or &lt;= for weak inequality\nin for list membership\n\n\nx != 10\n\nFalse\n\n\n\nif x == 8:\n    print('x is 8')\nelif x == 9:\n    print('x is 9')\nelse:\n    print('x is neither 8 nor 9')\n\nx is neither 8 nor 9\n\n\n\n\nand and or\nCombine statements with and and or\n\nif (x &gt;= 0) and (x &lt; 20):\n    print('x is in [0, 20)')\n\nx is in [0, 20)\n\n\n\nif 0 &lt;= x &lt; 20:\n    print('x is in [0, 20)')\n\nx is in [0, 20)\n\n\n\n\nIndentation\nMake sure the code inside the if statement is properly indented (4 spaces)"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#loops",
+    "href": "Python/Lectures/lecture1.html#loops",
+    "title": "Lesson 1",
+    "section": "Loops",
+    "text": "Loops\nIf you want to repeat a task\n\nIndentation\nMake sure the code inside the loop is properly indented (4 spaces)\n\n\nFor loops\nIterate through the elements of a list/tuple/etc\n\n# List/tuple\nfor lecture in lectures:\n    print('Lecture:', lecture)\n\nLecture: 0\nLecture: 2\nLecture: 3\nLecture: 4\nLecture: 5\nLecture: 6\nLecture: 7\nLecture: 8\n\n\n\nlectures_occurred.items()\n\ndict_items([(1, 'True'), (2, 'False'), (3, 'False'), (4, 'False'), (5, 'False'), (6, 'False'), (7, 'False'), (8, 'False'), (0, False), ('word', 'definition')])\n\n\n\n# Dict\nfor lecture, lecture_occurred in lectures_occurred.items():\n    print(f'Lecture {lecture} occurred: {lecture_occurred}')\n\nLecture 1 occurred: True\nLecture 2 occurred: False\nLecture 3 occurred: False\nLecture 4 occurred: False\nLecture 5 occurred: False\nLecture 6 occurred: False\nLecture 7 occurred: False\nLecture 8 occurred: False\nLecture 0 occurred: False\nLecture word occurred: definition\n\n\n\nlen(lectures)\n\n8\n\n\n\n# Range\nfor i in range(len(lectures)):\n    print(f'Loop {i}, lecture {lectures[i]}')\n\nLoop 0, lecture 0\nLoop 1, lecture 2\nLoop 2, lecture 3\nLoop 3, lecture 4\nLoop 4, lecture 5\nLoop 5, lecture 6\nLoop 6, lecture 7\nLoop 7, lecture 8\n\n\n\n# Enumerate\nfor i, lecture in enumerate(lectures):\n    print(f'Loop {i}, lecture {lecture}')\n\nLoop 0, lecture 0\nLoop 1, lecture 2\nLoop 2, lecture 3\nLoop 3, lecture 4\nLoop 4, lecture 5\nLoop 5, lecture 6\nLoop 6, lecture 7\nLoop 7, lecture 8\n\n\n\n\nWhile loops\nIterate as long as some condition holds\n\ni = 0\nwhile i &lt; 10:\n    print(i)\n    i += 1\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\nBreaks\nAn alternative way to get out of loops\n\ni = 0\nwhile True:\n    print(i)\n    i += 1\n    if i &gt;= 10:\n        break\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n\n\n\nContinue\nIf you want an if statement for clarity, but you don’t want it to do anything\n\nfor i, lecture in enumerate(lectures):\n    print(i)\n    if lecture == 3:\n        continue\n    else:\n        print('This is not lecture 3')\n\n0\nThis is not lecture 3\n1\nThis is not lecture 3\n2\n3\nThis is not lecture 3\n4\nThis is not lecture 3\n5\nThis is not lecture 3\n6\nThis is not lecture 3\n7\nThis is not lecture 3"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#functions",
+    "href": "Python/Lectures/lecture1.html#functions",
+    "title": "Lesson 1",
+    "section": "Functions",
+    "text": "Functions\nA simple way to repeat a task\n\nIndentation\nMake sure the code inside the function is properly indented (4 spaces)\n\n\nArguments\nThe input the function requires to run (equivalent to the arguments of a mathematical function)\n\n\nReturns\nWhat the function produces after it runs\n\n\nComments\nExplain what you code is doing (put # before a single-line comment, or wrap a multi-line comment in triple quotes ''')\n\nDocstrings\nDetail at the top of the function what it does, what the arguments are, and what it returns\n\ndef square_x(x):\n    '''\n    Return the square of x.\n    \n    Arguments:\n        x (float): value to square\n        \n    Returns:\n        (float): square of x\n    '''\n    return x ** 2\n\ndef list_mean(lst):\n    '''\n    Return the mean of a list of numbers.\n    \n    Arguments:\n        lst (list): list to compute the mean of\n        \n    Returns:\n        (float): mean value of lst\n    '''\n    lst_sum = 0\n    lst_len = 0\n    for val in lst:\n        # Add values to sum\n        lst_sum += val\n        # Update length of list\n        lst_len += 1\n    # Compute mean value in lst\n    return lst_sum / lst_len\n\ndef list_mean_v2(lst):\n    '''\n    Return the mean of a list of numbers.\n    \n    Arguments:\n        lst (list): list to compute the mean of\n        \n    Returns:\n        (float): mean value of lst\n    '''\n    return sum(lst) / len(lst)\n\ndef list_mean_v3(lst1, lst2):\n    '''\n    Return the mean of the means of two lists of numbers.\n    \n    Arguments:\n        lst1 (list): list 1 to compute the mean of\n        lst2 (list): list 2 to compute the mean of\n\n    Returns:\n        (float): mean value of mean values of lst1 and lst2\n    '''\n    return (list_mean_v2(lst1) + list_mean_v2(lst2)) / 2\n\n\nsquare_x(10)\n\n100\n\n\n\nlist_mean([2, 7, 10])\n\n6.333333333333333\n\n\n\nlist_mean_v2([2, 7, 10])\n\n6.333333333333333\n\n\n\nlist_mean_v3([2, 7, 10], [5, 12, 1])\n\n6.166666666666666"
+  },
+  {
+    "objectID": "Python/Lectures/lecture1.html#printing-text",
+    "href": "Python/Lectures/lecture1.html#printing-text",
+    "title": "Lesson 1",
+    "section": "Printing text",
+    "text": "Printing text\nLook throughout for examples, but primarily use f:\n\nprint(f'This is an f statement, so we can print variables like lists: {lectures} or dicts: {lectures_occurred} easily')\n\nThis is an f statement, so we can print variables like lists: [0, 2, 3, 4, 5, 6, 7, 8] or dicts: {1: 'True', 2: 'False', 3: 'False', 4: 'False', 5: 'False', 6: 'False', 7: 'False', 8: 'False', 0: False, 'word': 'definition'} easily\n\n\nFor simple cases, use commas (this is not as clean for complicated examples):\n\nprint('Lectures:', lectures)\n\nLectures: [0, 2, 3, 4, 5, 6, 7, 8]"
+  },
+  {
+    "objectID": "Python/Lectures/lecture5.html",
+    "href": "Python/Lectures/lecture5.html",
+    "title": "Lesson 5",
+    "section": "",
+    "text": "NumPy"
+  },
+  {
+    "objectID": "Python/Lectures/lecture5.html#overview",
+    "href": "Python/Lectures/lecture5.html#overview",
+    "title": "Lesson 5",
+    "section": "",
+    "text": "NumPy"
+  },
+  {
+    "objectID": "Python/Lectures/lecture5.html#numpy",
+    "href": "Python/Lectures/lecture5.html#numpy",
+    "title": "Lesson 5",
+    "section": "NumPy",
+    "text": "NumPy\nVectors/arrays/matrices in Python.\n\nimport numpy as np\n\n\na = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\n\n\nb = np.array(a)\n\n\nb * b\n\narray([[ 1,  4],\n       [ 9, 16]])\n\n\n\nb @ b\n\narray([[ 7, 10],\n       [15, 22]])\n\n\n\nnp.linalg.inv(b) @ b\n\narray([[1.00000000e+00, 0.00000000e+00],\n       [2.22044605e-16, 1.00000000e+00]])\n\n\n\nzeros/ones\n\na = np.ones(100)\na\n\narray([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])\n\n\n\na = np.zeros((5, 10))\na\n\narray([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n       [0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])\n\n\n\n\nAccessing elements/slicing/indexing\n\na[0][0]\n\n1\n\n\n\nb[0, 0]\n\n1\n\n\n\nidx = (0, 0)\nb[idx]\n\n1\n\n\n\na[idx]\n\nTypeError: list indices must be integers or slices, not tuple\n\n\n\na[:1]\n\n[[1, 2]]\n\n\n\nb\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\nb[:, [0, 2]][[0, 2], :]\n\narray([[1, 3],\n       [7, 9]])\n\n\n\na = rng.normal(size=1000)\nb = rng.integers(1000, size=50)\n\n\nb\n\narray([854,  55, 721, 913, 582, 439, 713, 117, 541, 820, 156, 623, 870,\n       966, 450, 282, 695, 531, 311, 678, 634, 645, 638, 191, 864, 611,\n       780,  71, 855, 821, 675,  97, 334, 291, 375, 484, 908, 241,  55,\n       878, 874, 752, 142,  44, 140, 563, 856, 566, 142, 274])\n\n\n\na[b]\n\narray([ 0.2689581 ,  1.41934817,  1.57621281,  1.139808  , -1.76639489,\n        0.81610715,  0.38888301,  1.71726308,  1.14546214,  0.8108156 ,\n       -0.67623437, -1.41618068, -0.60233814,  0.56134346, -0.35607535,\n       -0.98763303,  0.65829702,  1.63569133, -0.01772804,  0.19893244,\n       -1.54752077, -0.31806732,  0.14708579,  0.08111794, -0.6938663 ,\n        0.26720002,  0.03590914, -0.87805471,  2.37575881, -2.2908119 ,\n        0.88363284,  1.46243824, -0.17557353, -0.49139499, -0.69848635,\n       -0.47201708, -0.85016032, -0.0994117 ,  1.41934817, -0.02496758,\n        0.97252838,  0.26191014,  0.03688618, -0.58286632,  0.2434175 ,\n       -0.92525986, -1.0388805 , -1.73462436,  0.03688618,  0.5394642 ])\n\n\n\n\nTranspose\n\nnp.transpose(b, [1, 0])\n\narray([[1, 4, 7],\n       [2, 5, 8],\n       [3, 6, 9]])\n\n\n\n\nTile and repeat\n\nc = np.arange(3)\nc\n\narray([0, 1, 2])\n\n\n\nnp.tile(c, 3)\n\narray([0, 1, 2, 0, 1, 2, 0, 1, 2])\n\n\n\nnp.tile(c, (3, 2))\n\narray([[0, 1, 2, 0, 1, 2],\n       [0, 1, 2, 0, 1, 2],\n       [0, 1, 2, 0, 1, 2]])\n\n\n\nnp.repeat(c, 3)\n\narray([0, 0, 0, 1, 1, 1, 2, 2, 2])\n\n\n\nnp.repeat(c, (1, 2, 3))\n\narray([0, 1, 1, 2, 2, 2])\n\n\n\n\nBroadcasting\n\nc2 = np.tile(c, (3, 1))\nc2\n\narray([[0, 1, 2],\n       [0, 1, 2],\n       [0, 1, 2]])\n\n\n\nb\n\narray([[1, 2, 3],\n       [4, 5, 6],\n       [7, 8, 9]])\n\n\n\nc2 * b\n\narray([[ 0,  2,  6],\n       [ 0,  5, 12],\n       [ 0,  8, 18]])\n\n\n\nc[None, :] * b\n\narray([[ 0,  2,  6],\n       [ 0,  5, 12],\n       [ 0,  8, 18]])\n\n\n\nc2.T * b\n\narray([[ 0,  0,  0],\n       [ 4,  5,  6],\n       [14, 16, 18]])\n\n\n\nc[:, None] * b\n\narray([[ 0,  0,  0],\n       [ 4,  5,  6],\n       [14, 16, 18]])\n\n\n\nc\n\narray([0, 1, 2])\n\n\n\nc.shape\n\n(3,)\n\n\n\nc[:, None] + c[None, :]\n\narray([[0, 1, 2],\n       [1, 2, 3],\n       [2, 3, 4]])\n\n\n\n\ndiff\n\na = rng.normal(size=100000)\na\n\narray([-0.63772837, -0.26732566, -1.21791619, ...,  0.1078897 ,\n       -0.31508546,  1.53632125])\n\n\n\n%%timeit\na[1:] - a[: -1]\n\n26.7 µs ± 82.2 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)\n\n\n\n%%timeit\nnp.diff(a)\n\n28.7 µs ± 295 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)\n\n\n\n\ncumsum\n\na = np.arange(5)\na\n\narray([0, 1, 2, 3, 4])\n\n\n\nnp.cumsum(a)\n\narray([ 0,  1,  3,  6, 10])\n\n\n\n\nargmin/argmax/argsort\n\na = rng.normal(size=100)\n\n\na.argmax()\n\n75\n\n\n\nnp.argmax([2, 2, 1])\n\n0\n\n\n\na.argmin()\n\n27\n\n\n\na.argsort()\n\narray([27, 61,  9, 40, 43, 72, 25, 60, 54, 69, 14, 48, 51, 87,  1, 53, 16,\n       91, 58,  0, 88, 79, 84, 56,  4, 78, 80, 55, 98,  2, 66,  6, 86, 52,\n        8, 15, 95, 23, 81, 39, 92, 49, 85, 30, 45, 17, 34, 11, 83, 62, 93,\n       71, 82, 37, 68, 74, 47, 65, 21, 35, 24, 41, 50, 77, 29, 99, 26, 36,\n       19,  5, 67, 42, 63, 32, 31, 20, 73,  7, 59, 57, 64, 13, 22, 28, 96,\n       70, 10, 18, 46, 89, 38, 12, 33, 90, 76, 44,  3, 94, 97, 75])\n\n\n\n\nRandom generators\n\nrng = np.random.default_rng(1)\n\n\nrng.normal(size=10)\n\narray([ 0.34558419,  0.82161814,  0.33043708, -1.30315723,  0.90535587,\n        0.44637457, -0.53695324,  0.5811181 ,  0.3645724 ,  0.2941325 ])\n\n\n\n\nSparse matrices\n\nfrom scipy.sparse import csc_matrix\n\n\nn = 100\nn_ids = 10\nids = rng.integers(n_ids, size=n)\n\n\nJ = csc_matrix((np.ones(n), (np.arange(n), ids)), shape=(n, n_ids))\n\n\nJ.todense()\n\nmatrix([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 1., 0., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 1., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 1., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 1., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 1., 0., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 1., 0., 0., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 1., 0.],\n        [0., 0., 0., 0., 0., 0., 0., 0., 0., 1.],\n        [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])\n\n\n\n(J.T @ J).todense()\n\nmatrix([[ 6.,  0.,  0., ...,  0.,  0.,  0.],\n        [ 0., 10.,  0., ...,  0.,  0.,  0.],\n        [ 0.,  0.,  8., ...,  0.,  0.,  0.],\n        ...,\n        [ 0.,  0.,  0., ...,  7.,  0.,  0.],\n        [ 0.,  0.,  0., ...,  0., 14.,  0.],\n        [ 0.,  0.,  0., ...,  0.,  0., 11.]])\n\n\n\n%%timeit\n(J.T @ J)\n\n702 ms ± 9.54 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n\n\n\n\nBincount\n\nnp.bincount(ids)\n\narray([ 6, 10,  8, ...,  7, 14, 11])\n\n\n\n%%timeit\nnp.bincount(ids)\n\n19.8 ms ± 388 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)\n\n\n\n\nMatrix multiplication with diagonal matrices\n\ndef DxM(diag, m):\n    '''\n    Product of a diagonal and a matrix, i.e. take diag @ m.\n\n    Arguments:\n        diag (NumPy Array or float): diagonal entries or multiplicative factor\n        m (NumPy Array): matrix\n    '''\n    if isinstance(diag, (float, int)):\n        # If multiplicative factor\n        if diag == 1:\n            return m\n        return diag * m\n\n    # If diagonal entries\n    return (diag * m.T).T\n\ndef MxD(m, diag):\n    '''\n    Product of a matrix and a diagonal, i.e. take m @ diag.\n\n    Arguments:\n        m (NumPy Array): matrix\n        diag (NumPy Array or float): diagonal entries or multiplicative factor\n    '''\n    if isinstance(diag, (float, int)):\n        # If multiplicative factor\n        if diag == 1:\n            return m\n        return diag * m\n\n    # If diagonal entries\n    return m * diag\n\n\nn = int(3 * 1e3)\na = rng.normal(size=(n, n))\nb = rng.normal(size=n)\n\n\nnp.diag(b)\n\narray([[-0.12979449,  0.        ,  0.        , ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.        ,  1.38349557,  0.        , ...,  0.        ,\n         0.        ,  0.        ],\n       [ 0.        ,  0.        ,  0.17053631, ...,  0.        ,\n         0.        ,  0.        ],\n       ...,\n       [ 0.        ,  0.        ,  0.        , ...,  0.36049499,\n         0.        ,  0.        ],\n       [ 0.        ,  0.        ,  0.        , ...,  0.        ,\n         0.35106105,  0.        ],\n       [ 0.        ,  0.        ,  0.        , ...,  0.        ,\n         0.        ,  0.69177961]])\n\n\n\n%%timeit\nnp.diag(b) @ a\n\n650 ms ± 25.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n\n\n\n%%timeit\nDxM(b, a)\n\n4.45 ms ± 150 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n\n\n\n%%timeit\nb[:, None] * a\n\n4.16 ms ± 138 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n\n\n\n%%timeit\na @ np.diag(b)\n\n630 ms ± 28.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)\n\n\n\n%%timeit\nMxD(a, b)\n\n5.55 ms ± 105 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)\n\n\n\nDxM(b, a)\n\narray([[ 0.04305389, -0.02450608,  0.03333491, ...,  0.07252111,\n        -0.20889637, -0.06667676],\n       [-3.04643963,  0.695854  ,  1.09382668, ..., -0.3196933 ,\n        -3.23805228, -0.73283361],\n       [ 0.02401034,  0.11501715,  0.01543444, ..., -0.11485651,\n         0.10094913,  0.11068856],\n       ...,\n       [-0.81180489, -0.08033079,  0.15354346, ...,  0.27811731,\n         0.40886214,  0.05923034],\n       [-0.03913632,  0.0205819 ,  0.38672633, ...,  0.51782762,\n        -0.52494684, -0.3598065 ],\n       [-0.56939833,  0.23959058,  0.88602361, ..., -1.20676408,\n         0.2856753 ,  0.46799477]])\n\n\n\n\nNonzero\n\na = rng.binomial(1, 0.5, size=100)\na\n\narray([0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0,\n       1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1,\n       1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0,\n       0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0,\n       0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0])\n\n\n\nnp.argmax(a)\n\n1\n\n\n\nnp.nonzero(a)[0]\n\narray([ 1,  2,  3,  6,  7,  8,  9, 12, 13, 16, 18, 22, 23, 28, 32, 33, 34,\n       37, 39, 41, 42, 43, 44, 47, 48, 49, 50, 53, 60, 61, 62, 67, 71, 74,\n       78, 81, 82, 84, 86, 90, 93, 98])"
+  },
+  {
+    "objectID": "Python/Lectures/lecture4.html",
+    "href": "Python/Lectures/lecture4.html",
+    "title": "Lesson 4",
+    "section": "",
+    "text": "Classes\nQueues\nPA3 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture4.html#overview",
+    "href": "Python/Lectures/lecture4.html#overview",
+    "title": "Lesson 4",
+    "section": "",
+    "text": "Classes\nQueues\nPA3 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture4.html#classes",
+    "href": "Python/Lectures/lecture4.html#classes",
+    "title": "Lesson 4",
+    "section": "Classes",
+    "text": "Classes\nAn easy way to store and handle “related” data/variables.\n\nclass Student():\n    def __init__(self, first_name, last_name, middle_name=None):\n        self.first_name = first_name\n        self.last_name = last_name\n        self.middle_name = middle_name\n\n    def print_name(self):\n        if self.middle_name is None:\n            print(self.first_name, self.last_name)\n        else:\n            print(self.first_name, self.middle_name, self.last_name)\n\n\nstudent1 = Student(first_name='Adam', middle_name='Alexander', last_name='Oppenheimer')\nstudent1.print_name()\n\nAdam Alexander Oppenheimer\n\n\n\nstudent2 = Student(first_name='Yutong', last_name='Zhong')\nstudent2.print_name()\n\nYutong Zhong\n\n\n\nstudent1.middle_name\n\n'Alexander'\n\n\n\nstudent1.new_variable = 10\n\n\nstudent1.new_variable\n\n10\n\n\n\nclass Classroom():\n    def __init__(self, class_number):\n        self.class_number = class_number\n        self.students = []\n\n    def add_student(self, student):\n        self.students.append(student)\n\n    def sort_students(self, order='last_name'):\n        if order == 'last_name':\n            self.students = sorted(self.students, key=lambda a: a.last_name)\n        elif order == 'first_name':\n            self.students = sorted(self.students, key=lambda a: a.first_name)\n\n    def print(self):\n        print('Class number:', self.class_number)\n        print('Students:')\n        for student in self.students:\n            student.print_name()\n\n\npython_course = Classroom(1)\npython_course.add_student(student2)\npython_course.add_student(student1)\npython_course.print()\n\nClass number: 1\nStudents:\nYutong Zhong\nAdam Alexander Oppenheimer\n\n\n\npython_course.sort_students()\npython_course.print()\n\nClass number: 1\nStudents:\nAdam Alexander Oppenheimer\nYutong Zhong\n\n\n\npython_course.add_student(61)\n\n\npython_course.sort_students()\n\nAttributeError: 'int' object has no attribute 'last_name'\n\n\n\npython_course.print()\n\nClass number: 1\nStudents:\nAdam Alexander Oppenheimer\nYutong Zhong\n\n\nAttributeError: 'int' object has no attribute 'print_name'"
+  },
+  {
+    "objectID": "Python/Lectures/lecture4.html#queues",
+    "href": "Python/Lectures/lecture4.html#queues",
+    "title": "Lesson 4",
+    "section": "Queues",
+    "text": "Queues\nWhat goes in first comes out first.\n\nimport queue\n\na = queue.Queue()\na.put(1)\na.put(3)\na.put(2)\nprint(a.get())\nprint(a.get())\nprint(a.get())\n\n1\n3\n2\n\n\n\na.get()\n\nKeyboardInterrupt: \n\n\nPriority Queue orders based on some ranking (often the first element of a tuple). Read more about them for PA4.\n\nb = queue.PriorityQueue()\nb.put((1, 'hello'))\nb.put((3, 'goodbye'))\nb.put((2, 'waiting'))\nprint(b.get())\nprint(b.get())\nprint(b.get())\n\n(1, 'hello')\n(2, 'waiting')\n(3, 'goodbye')"
+  },
+  {
+    "objectID": "Python/Lectures/lecture4.html#pa3-review",
+    "href": "Python/Lectures/lecture4.html#pa3-review",
+    "title": "Lesson 4",
+    "section": "PA3 review",
+    "text": "PA3 review\nQuickly review my solution"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html",
+    "href": "Python/Lectures/lecture2.html",
+    "title": "Lesson 2",
+    "section": "",
+    "text": "Stuff I forgot to teach\n\nAccessing substrings\n\nNesting\n\nNested loops\n\n\nNested lists/tuples/dicts/etc.\n\nScope\n\nVariables\n\n\nFunctions\n\nList index\nPA1 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#overview",
+    "href": "Python/Lectures/lecture2.html#overview",
+    "title": "Lesson 2",
+    "section": "",
+    "text": "Stuff I forgot to teach\n\nAccessing substrings\n\nNesting\n\nNested loops\n\n\nNested lists/tuples/dicts/etc.\n\nScope\n\nVariables\n\n\nFunctions\n\nList index\nPA1 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#stuff-i-forgot-to-teach",
+    "href": "Python/Lectures/lecture2.html#stuff-i-forgot-to-teach",
+    "title": "Lesson 2",
+    "section": "Stuff I forgot to teach",
+    "text": "Stuff I forgot to teach\n\nAccessing substrings\nAccess substrings as if the string is a list\n\na = 'hello'\na[3: 5]\n\n'lo'\n\n\n\na[0]\n\n'h'\n\n\n\na[2:]\n\n'llo'\n\n\n\na[-3:]\n\n'llo'"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#nesting",
+    "href": "Python/Lectures/lecture2.html#nesting",
+    "title": "Lesson 2",
+    "section": "Nesting",
+    "text": "Nesting\n\nNested loops\nA loop inside a loop\nNOTE 1: Be careful about indents!\nNOTE 2: You can include if and/or while statements inside nested loops\n\nfor i in range(3):\n    for j in range(3):\n        print(f'i: {i}, j: {j}')\n\ni: 0, j: 0\ni: 0, j: 1\ni: 0, j: 2\ni: 1, j: 0\ni: 1, j: 1\ni: 1, j: 2\ni: 2, j: 0\ni: 2, j: 1\ni: 2, j: 2\n\n\n\n\nNested lists/tuples/dicts/etc.\nThe elements of the main list are lists - access sublists using brackets, then elements of sublists using brackets\n\nnested_list = [\n    ['a11', 'a12', 'a13'],\n    ['a21', 'a22', 'a23', 'a24'],\n    ['a31', 'a32', 'a33']\n]\nprint(nested_list)\n\n[['a11', 'a12', 'a13'], ['a21', 'a22', 'a23', 'a24'], ['a31', 'a32', 'a33']]\n\n\n\nprint(nested_list[1])\n\n['a21', 'a22', 'a23', 'a24']\n\n\n\nprint(nested_list[1][2])\n\na23\n\n\n\nnested_list = [\n    ['a11', 'a12', 'a13'],\n    ['a21', 'a22', 'a23', 'a24'],\n    ['a31', 'a32', 'a33'],\n    'fjls',\n    134,\n    {'a': {'c': [1, 2, 3], 'd': 123}, 'b': 2}\n]\nprint(nested_list)\n\n[['a11', 'a12', 'a13'], ['a21', 'a22', 'a23', 'a24'], ['a31', 'a32', 'a33'], 'fjls', 134, {'a': {'c': [1, 2, 3], 'd': 123}, 'b': 2}]\n\n\n\nprint(nested_list[5])\n\n{'a': {'c': [1, 2, 3], 'd': 123}, 'b': 2}\n\n\n\nprint(nested_list[5]['a'])\n\n{'c': [1, 2, 3], 'd': 123}\n\n\n\nprint(nested_list[5]['a']['d'])\n\n123"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#scope",
+    "href": "Python/Lectures/lecture2.html#scope",
+    "title": "Lesson 2",
+    "section": "Scope",
+    "text": "Scope\nWhat is the effect of modifying a variable?\n\nVariables\n\na = 3\nb = a\nb = 4\nprint(f'a: {a}, b: {b}')\n\na: 3, b: 4\n\n\nVariables that are lists are actually references to where the list is stored in memory\n\na = [1, 2, 3]\nb = a\nb.append(4)\nprint('a:', a)\nprint('b:', b)\n\na: [1, 2, 3, 4]\nb: [1, 2, 3, 4]\n\n\n\nb = [1, 2, 3, 4, 5]\nprint('a:', a)\nprint('b:', b)\n\na: [1, 2, 3, 4]\nb: [1, 2, 3, 4, 5]\n\n\n\n\nCopying\n\nb = a.copy()\nb.append(5)\nprint('a:', a)\nprint('b:', b)\n\na: [1, 2, 3, 4]\nb: [1, 2, 3, 4, 5]\n\n\n\n\nFunctions\nDefining new variables inside a function is a new, smaller scope\n\na = 5\n\ndef a_to_ten():\n    a = 10\n    print('Inside function:', a)\n\nprint('Before function:', a)\na_to_ten()\nprint('After function:', a)\n\nBefore function: 5\nInside function: 10\nAfter function: 5\n\n\nCan still modify lists inside of functions (this is called in-place modification)\n\na = [1, 2, 3]\n\ndef append_4(a):\n    a.append(4)\n\nprint('Before function:', a)\nappend_4(a)\nprint('After function:', a)\n\nBefore function: [1, 2, 3]\nAfter function: [1, 2, 3, 4]\n\n\n\na = [1, 2, 3]\n\ndef append_4():\n    a.append(4)\n\nprint('Before function:', a)\nappend_4()\nprint('After function:', a)\n\nBefore function: [1, 2, 3]\nAfter function: [1, 2, 3, 4]\n\n\n\na = [1, 2, 3]\n\ndef append_4():\n    a.copy().append(4)\n\nprint('Before function:', a)\nappend_4()\nprint('After function:', a)\n\nBefore function: [1, 2, 3]\nAfter function: [1, 2, 3]\n\n\n\na = 'hello'\n\ndef append_4(a):\n    a += 'goodbye'\n    return a\n\nprint('Before function:', a)\na2 = append_4(a)\nprint('After function:', a)\nprint('a2:', a2)\n\nBefore function: hello\nAfter function: hello\na2: hellogoodbye"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#list-index",
+    "href": "Python/Lectures/lecture2.html#list-index",
+    "title": "Lesson 2",
+    "section": "List index",
+    "text": "List index\nFind the index of an element in a list - useful for PA2\n\nlist1 = ['a', 'b', 'c']\nprint(list1.index('a'))\nprint(list1.index('b'))\nprint(list1.index('c'))\n\n0\n1\n2\n\n\n\nlist2 = ['a', 'b', 'c', 'a']\nprint(list2.index('a'))\n\n0\n\n\nTo get all indices for a value\n\nimport numpy as np\n\nnp.nonzero((np.array(list2) == 'a').astype(int))[0]\n\narray([0, 3])"
+  },
+  {
+    "objectID": "Python/Lectures/lecture2.html#pa1-review",
+    "href": "Python/Lectures/lecture2.html#pa1-review",
+    "title": "Lesson 2",
+    "section": "PA1 review",
+    "text": "PA1 review\nQuickly review my solution"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html",
+    "href": "Python/Lectures/lecture3.html",
+    "title": "Lesson 3",
+    "section": "",
+    "text": "Tricks for functions\n\nLambda functions\n\n\nComposing functions\n\nTricks for lists\n\nSyntactic sugar\n\n\nsorted()\n\n\nzip()\n\n\nany() and all()\n\nTricks for strings\n\nlower()\n\n\nsplit()\n\n\nstrip()\n\n\nstartswith()\n\nType casting\nPA2 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html#overview",
+    "href": "Python/Lectures/lecture3.html#overview",
+    "title": "Lesson 3",
+    "section": "",
+    "text": "Tricks for functions\n\nLambda functions\n\n\nComposing functions\n\nTricks for lists\n\nSyntactic sugar\n\n\nsorted()\n\n\nzip()\n\n\nany() and all()\n\nTricks for strings\n\nlower()\n\n\nsplit()\n\n\nstrip()\n\n\nstartswith()\n\nType casting\nPA2 Review"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html#tricks-for-functions",
+    "href": "Python/Lectures/lecture3.html#tricks-for-functions",
+    "title": "Lesson 3",
+    "section": "Tricks for functions",
+    "text": "Tricks for functions\n\nLambda functions\nShorthand functions for simple tasks. Especially useful for sorting (will discuss soon).\n\nsum_a_b_sq = lambda a, b: a + b ** 2\nprint(sum_a_b_sq(2, 4))\n\n18\n\n\n\n\nComposing functions\nApply multiple functions in one line. Notice *, which unpacks the list (** unpacks a dictionary).\n\na_sq_b_cubed = lambda a, b: (a ** 2, b ** 3)\nprint(sum_a_b_sq(*a_sq_b_cubed(4, 12)))\n\n2986000\n\n\n\na_sq_b_cubed(4, 12)\n\n(16, 1728)\n\n\n\n*a_sq_b_cubed(4, 12)\n\nSyntaxError: can't use starred expression here (2410165554.py, line 1)\n\n\n\ndef print_name(first_name, last_name, middle_name=''):\n    print(first_name, middle_name, last_name)\n\nprint_name(first_name='Adam', middle_name='Alexander', last_name='Oppenheimer')\nprint_name(**{'first_name': 'Adam', 'middle_name': 'Alexander', 'last_name': 'Oppenheimer'})\n\nSyntaxError: non-default argument follows default argument (1961358567.py, line 1)\n\n\n\ndef print_name(first_name, middle_name='', last_name):\n    print(first_name, middle_name, last_name)\n\nSyntaxError: non-default argument follows default argument (4160617308.py, line 1)"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html#tricks-for-lists",
+    "href": "Python/Lectures/lecture3.html#tricks-for-lists",
+    "title": "Lesson 3",
+    "section": "Tricks for lists",
+    "text": "Tricks for lists\n\nSyntactic sugar\nSuper convenient way to create lists (also works for dictionaries and tuples).\n\nlst = []\nfor a in range(5):\n    lst.append(a)\nprint(lst)\n\n[0, 1, 2, 3, 4]\n\n\n\n[a for a in range(5)]\n\n[0, 1, 2, 3, 4]\n\n\n\n[a if (a % 2 == 0) else 1 / a for a in range(5)]\n\n[0, 1.0, 2, 0.3333333333333333, 4]\n\n\n\n[a for a in range(5) if a != 3]\n\n[0, 1, 2, 4]\n\n\n\n[a if (a % 2 == 0) else 1 / a for a in range(5) if a != 2]\n\n[0, 1.0, 0.3333333333333333, 4]\n\n\nCan even nest syntactic sugar. Notice you order the for loops in the same order as if you were writing out the full loops.\n\n[(i, j) for i in range(3) for j in range(2)]\n\n[(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]\n\n\n\n[(i, j) for i in range(3) for j in range(i)]\n\n[(1, 0), (2, 0), (2, 1)]\n\n\nBe careful about some weird behavior with syntactic sugar (this can also happen with regular loops) (see https://stackoverflow.com/questions/3431676/creating-functions-or-lambdas-in-a-loop-or-comprehension).\n\n\nsorted()\nSort a list and specify the key. Notice the lambda functions to set the key for sorting.\n\nsorted([('d', 4), ('a', 1), ('r', 2)], key=lambda a: a[0])\n\n[('a', 1), ('d', 4), ('r', 2)]\n\n\n\nsorted([('d', 4), ('a', 1), ('r', 2)], key=lambda a: a[1])\n\n[('a', 1), ('r', 2), ('d', 4)]\n\n\n\n\nzip()\nCombine two lists element by element. Make sure to convert to a list for PA3.\n\nlist(zip(range(0, 5), range(5, 0, -1)))\n\n[(0, 5), (1, 4), (2, 3), (3, 2), (4, 1)]\n\n\nMake sure the lists are the same length! They’ll zip even if they aren’t!\n\nlist(zip(range(0, 7), range(5, 0, -1)))\n\n[(0, 5), (1, 4), (2, 3), (3, 2), (4, 1)]\n\n\n\nfor i in zip(range(0, 5), range(5, 0, -1)):\n    print(i)\n\n(0, 5)\n(1, 4)\n(2, 3)\n(3, 2)\n(4, 1)\n\n\n\nzipped_lst = zip(range(0, 5), range(5, 0, -1))\nfor elmt in zipped_lst:\n    print(elmt)\n    break\nfor elmt in zipped_lst:\n    print(elmt)\n    break\nprint(zipped_lst[0])\n\n(0, 5)\n(1, 4)\n\n\nTypeError: 'zip' object is not subscriptable\n\n\n\n\nany() and all()\nany(): check whether any element of a list is True.\nall(): check whether all elements of a list are True.\n\nany([True, True, False])\n\nTrue\n\n\n\nany([False, False, False])\n\nFalse\n\n\n\nall([True, True, False])\n\nFalse\n\n\n\nall([True, True, True])\n\nTrue"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html#tricks-for-strings",
+    "href": "Python/Lectures/lecture3.html#tricks-for-strings",
+    "title": "Lesson 3",
+    "section": "Tricks for strings",
+    "text": "Tricks for strings\n\nlower()\nConvert text to lowercase.\n\n'HELLO'.lower()\n\n'hello'\n\n\n\n\nsplit()\nSplit string into a list, dividing words by the specified character.\n\n'Hello, I am Adam.'.split(' ')\n\n['Hello,', 'I', 'am', 'Adam.']\n\n\n\n'Hello, I am Adam.'.split('m')\n\n['Hello, I a', ' Ada', '.']\n\n\n\n\nstrip()\nRemove the specified characters from the start and end of a string.\n\n'abcdefgabcdefg'.strip('bacdg')\n\n'efgabcdef'\n\n\n\n\nstartswith()\nCheck whether the string starts with the specified string.\n\n'hello'.startswith('he')\n\nTrue\n\n\n\n'hello'.startswith('hen')\n\nFalse\n\n\n\n\nType casting\nConvert between types by writing the name of the type you want to convert to and using the name as if it is a function.\n\nval = 1.0\nprint(val)\nprint(int(val))\n\n1.0\n1\n\n\n\nlst = [1, 2, 3]\nprint(lst)\nprint(tuple(lst))\n\n[1, 2, 3]\n(1, 2, 3)\n\n\n\nprint(zip(range(0, 5), range(5, 0, -1)))\nprint(list(zip(range(0, 5), range(5, 0, -1))))\n\n&lt;zip object at 0x7fd818792d80&gt;\n[(0, 5), (1, 4), (2, 3), (3, 2), (4, 1)]"
+  },
+  {
+    "objectID": "Python/Lectures/lecture3.html#pa2-review",
+    "href": "Python/Lectures/lecture3.html#pa2-review",
+    "title": "Lesson 3",
+    "section": "PA2 review",
+    "text": "PA2 review\nQuickly review my solution"
   }
 ]

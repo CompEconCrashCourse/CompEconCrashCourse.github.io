@@ -4,6 +4,8 @@ Author: "Adam A. Oppenheimer & Xing Xu"
 # bibliography: CourseBibliography.bib
 ---
 
+Disclaimer: this site is a work in progress!
+
 Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below. 
 
 All the notebooks for lectures and assignments can be downloaded from [Github repo](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io). 
@@ -22,26 +24,26 @@ It's important to note that the skills developed in these classes are broadly ap
 
 The class will last three weeks from ***June 3rd - June 21st, 2024***. There will be 6 lectures and accompanied problem sets for each language.
 
-Here is the proposed timeline of the lectures. 
+Here is the proposed timeline of the lectures. All lectures will be from 9:30 am - 11:00 am CDT.
 
 | Julia Lectures | Dates |
 | ---------- | -------- |
-| [Julia Fundamentals](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | June 4th 9:30 am - 11:00 am CDT |
-| [Neoclassical growth model (RBC)](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | June 6th 9:30 am - 11:00 am CDT |
-| [McCall's Job search model ](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | June 11th 9:30 am - 11:00 am CDT |
-| [Incomplete market model with heterogeneous household](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | June 13th 9:30 am - 11:00 am CDT |
-| [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | June 18th 9:30 am - 11:00 am CDT |
-| Lecture 6 (topic yet to be decided)| June 20th 9:30 - 11:00 am CDT | 
+| [Julia Fundamentals](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | Tuesday, June 4th |
+| [Neoclassical growth model (RBC)](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | Thursday, June 6th |
+| [McCall's Job search model ](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | Tuesday, June 11th |
+| [Incomplete market model with heterogeneous household](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | Thursday, June 13th |
+| [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | Tuesday, June 18th |
+| Lecture 6 (topic yet to be decided)| Thursday, June 20th | 
 (To get started with the Julia lectures, please set up with [Quantecon tutorial](https://julia.quantecon.org/getting_started_julia/getting_started.html#))
 
 | Python Lectures | Dates |
 | ---------- | -------- |
-| Lecture 1 | June 3th 9:30 am - 11:00 am CDT |
-| Lecture 2 | June 5th 9:30 am - 11:00 am CDT |
-| Lecture 3 | June 10th 9:30 am - 11:00 am CDT |
-| Lecture 4 | June 12th 9:30 am - 11:00 am CDT |
-| Lecture 5 | June 17th 9:30 am - 11:00 am CDT |
-| Lecture 6 | June 19th 9:30 am - 11:00 am CDT | 
+| [Basics: Conditionals, Loops, Functions, etc.](Python/Lectures/lecture1.ipynb) | Monday, June 3rd |
+| [Nesting, Scope, and Lists](Python/Lectures/lecture2.ipynb) | Wednesday, June 5th |
+| [Tips & Tricks](Python/Lectures/lecture3.ipynb) | Monday, June 10th |
+| [Classes and Queues](Python/Lectures/lecture4.ipynb) | Wednesday, June 12th |
+| [Numpy](Python/Lectures/lecture5.ipynb) | Monday, June 17th |
+| Pandas | Wednesday, June 19th | 
 
 ## Office Hours
 
@@ -56,7 +58,16 @@ Here are the links to the assignments:
 | [Assignment 1](Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb) | June 10th |
 | [Assignment 2](Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb) | June 12th |
 | Assignment 3 | June 17th  |
-| Assignment 4| June 19th |
+| Assignment 4 | June 19th |
 | Assignment 5 | June 24th |
-| Assignment 6| June 26th | 
+| Assignment 6 | June 26th | 
+
+| Python Assignments | Due Dates |
+| ---------- | -------- |
+| [Assignment 1](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa1/index.html) | June 5th |
+| [Assignment 2](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa2/index.html) | June 10th |
+| [Assignment 3](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa3/index.html) | June 12th  |
+| [Assignment 4](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa4/index.html) | June 17th |
+| [Assignment 5](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa5/index.html) | June 19th |
+| Assignment 6 | June 24th | 
 
