@@ -60,9 +60,3 @@ Here are the links to the assignments:
 | Assignment 5 | June 24th |
 | Assignment 6| June 26th | 
 
-## Resources for further studies
-
-The go-to:
-
-[Quantecon](https://quantecon.org/)
-
