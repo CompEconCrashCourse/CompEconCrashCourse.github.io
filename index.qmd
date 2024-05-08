@@ -8,7 +8,15 @@ Welcome to the 2024 summer course on computational economics at UMN! It will be 
 
 All the notebooks for lectures and assignments can be downloaded from [Github repo](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io). 
 
-## Introduction
+## Course Overview
+
+The course offerings are strategically designed to cater to varying interests and skill levels. The lectures on Julia will primarily concentrate on computational methods, demonstrating their applications across a range of classical economic models. This will involve hands-on practice with coding and implementing algorithms that are pivotal to economic analysis.
+
+In contrast, the Python lectures are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, culminating in the ability to tackle simple dynamic programming models. This structured approach ensures a gentle learning curve, making these lectures ideal for those who are just starting their journey in programming.
+
+Both courses are structured as introductory, requiring no prior experience in programming. This accessibility is key to encouraging participation among lower year graduate students. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses offered later in the curriculum.
+
+It's important to note that the skills developed in these classes are broadly applicable and will provide a strong foundation for those interested in advancing to more specialized computational sequences. However, students already familiar with basic or intermediate programming may find the pace introductory. Thus, senior students might prefer to direct their attention towards more advanced courses that align with their existing skill levels.
 
 ## Schedule
 
@@ -18,12 +26,13 @@ Here is the proposed timeline of the lectures.
 
 | Julia Lectures | Dates |
 | ---------- | -------- |
-| [Lecture 1](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | June 4th 9:30 am - 11:00 am CDT |
-| [Lecture 2](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | June 6th 9:30 am - 11:00 am CDT |
-| [Lecture 3](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | June 11th 9:30 am - 11:00 am CDT |
-| [Lecture 4](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | June 13th 9:30 am - 11:00 am CDT |
-| [Lecture 5](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | June 18th 9:30 am - 11:00 am CDT |
-| Lecture 6 | June 20th 9:30 - 11:00 am CDT | 
+| [Julia Fundamentals](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | June 4th 9:30 am - 11:00 am CDT |
+| [Neoclassical growth model (RBC)](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | June 6th 9:30 am - 11:00 am CDT |
+| [McCall's Job search model ](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | June 11th 9:30 am - 11:00 am CDT |
+| [Incomplete market model with heterogeneous household](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | June 13th 9:30 am - 11:00 am CDT |
+| [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | June 18th 9:30 am - 11:00 am CDT |
+| Lecture 6 (topic yet to be decided)| June 20th 9:30 - 11:00 am CDT | 
+(To get started with the Julia lectures, please set up with [Quantecon tutorial](https://julia.quantecon.org/getting_started_julia/getting_started.html#))
 
 | Python Lectures | Dates |
 | ---------- | -------- |
@@ -38,17 +47,22 @@ Here is the proposed timeline of the lectures.
 
 We will provide links to sign up for weekly office hours.
 
-## Topics
+## Assignments
 
-The courses will have different focuses, with the Julia lectures focusing more on computational methods and their implementations on different types of classic economic models and the Python lectures focusing on programming basics, building up fundamental tools that will culminate in solving simple dynamic programming models. Nevertheless, the classes will be complementary to each other as the skills learned can be applied to any programming languages.
+Here are the links to the assignments:
 
-The classes are designed to be introductory, with no prior knowledge on programming required.
-
-### Julia
-
-The 6 Julia lectures are arranged as follows:
-
-### Python
-
+| Julia Assignments | Due Dates |
+| ---------- | -------- |
+| [Assignment 1](Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb) | June 10th |
+| [Assignment 2](Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb) | June 12th |
+| Assignment 3 | June 17th  |
+| Assignment 4| June 19th |
+| Assignment 5 | June 24th |
+| Assignment 6| June 26th | 
 
 ## Resources for further studies
+
+The go-to:
+
+[Quantecon](https://quantecon.org/)
+
