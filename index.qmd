@@ -1,20 +1,32 @@
 ---
 title: "Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)"
-Author: "Adam A. Oppenheimer & Xing Xu"
+
+author:   
+  - name: Adam A. Oppenheimer 
+    email: oppen040@umn.edu
+    affiliations:
+      - ref: UMN
+  - name: Xing Xu
+    email: xu000956@umn.edu
+    affiliations:
+      - ref: UMN    
+affiliations:
+  - id: UMN
+    name: University of Minnesota-Twin Cities
 # bibliography: CourseBibliography.bib
 ---
 
-Disclaimer: this site is a work in progress!
+***Disclaimer***: this site is a work in progress!
 
-Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by Xing Xu and the Python lectures will be taught by Adam Oppenheimer. Find the detailed syllabus and information below. 
+Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by ***Xing Xu*** and the Python lectures will be taught by ***Adam Oppenheimer***. Find the detailed syllabus and information below. 
 
 All the notebooks for lectures and assignments can be downloaded from [Github repo](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io). 
 
 ## Course Overview
 
-The course offerings are designed to cater to varying interests and skill levels. The Julia lectures will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. 
+The course offerings are designed to cater to varying interests and skill levels. The [Julia lectures](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. 
 
-In contrast, the Python lectures are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.
+In contrast, the [Python lectures](Python/Lectures/lecture1.ipynb) are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.
 
 Both courses are structured as introductory, requiring no prior experience in programming. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses usually taken in the second year.
 
@@ -70,4 +82,3 @@ Here are the links to the assignments:
 | [Assignment 4](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa4/index.html) | June 17th |
 | [Assignment 5](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa5/index.html) | June 19th |
 | Assignment 6 | June 24th | 
-
