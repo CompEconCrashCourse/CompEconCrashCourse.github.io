@@ -12,17 +12,17 @@ All the notebooks for lectures and assignments can be downloaded from [Github re
 
 ## Course Overview
 
-The course offerings are strategically designed to cater to varying interests and skill levels. The lectures on Julia will primarily concentrate on computational methods, demonstrating their applications across a range of classical economic models. This will involve hands-on practice with coding and implementing algorithms that are pivotal to economic analysis.
+The course offerings are designed to cater to varying interests and skill levels. The Julia lectures will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. 
 
-In contrast, the Python lectures are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, culminating in the ability to tackle simple dynamic programming models. This structured approach ensures a gentle learning curve, making these lectures ideal for those who are just starting their journey in programming.
+In contrast, the Python lectures are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.
 
-Both courses are structured as introductory, requiring no prior experience in programming. This accessibility is key to encouraging participation among lower year graduate students. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses offered later in the curriculum.
+Both courses are structured as introductory, requiring no prior experience in programming. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses usually taken in the second year.
 
-It's important to note that the skills developed in these classes are broadly applicable and will provide a strong foundation for those interested in advancing to more specialized computational sequences. However, students already familiar with basic or intermediate programming may find the pace introductory. Thus, senior students might prefer to direct their attention towards more advanced courses that align with their existing skill levels.
+It's important to note that the skills developed in these classes are broadly applicable and will provide a strong foundation for those interested in advancing to more specialized computational sequences. However, students already familiar with basic or intermediate programming and computational economic skills may find some of the content less interesting. Thus, students equipped with those skills might prefer to direct their attention toward more advanced courses that align with their existing skill levels.
 
 ## Schedule
 
-The class will last three weeks from ***June 3rd - June 21st, 2024***. There will be 6 lectures and accompanied problem sets for each language.
+The class will last three weeks from ***June 3rd - June 21st, 2024***. The class will be online and zoom links will be provided to those who intent to participate. There will be 6 lectures and accompanied problem sets for each language. 
 
 Here is the proposed timeline of the lectures. All lectures will be from 9:30 am - 11:00 am CDT.
 
