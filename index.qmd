@@ -24,7 +24,7 @@ All the notebooks for lectures and assignments can be downloaded from [Github re
 
 ## Course Overview
 
-The course offerings are designed to cater to varying interests and skill levels. The [Julia lectures](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. 
+The course offerings are designed to cater to varying interests and skill levels. The [Julia lectures](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. Lecture 5 on June 18th will feature ***Professor [Kim Ruhl](https://kimjruhl.com)*** as a guest lecturer to talk about the model part.
 
 In contrast, the [Python lectures](Python/Lectures/lecture1.ipynb) are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.
 
@@ -44,7 +44,7 @@ Here is the proposed timeline of the lectures. All lectures will be from 9:30 am
 | [Neoclassical growth model (RBC)](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | Thursday, June 6th |
 | [McCall's Job search model ](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | Tuesday, June 11th |
 | [Incomplete market model with heterogeneous household](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | Thursday, June 13th |
-| [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) | Tuesday, June 18th |
+| [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) ***Guest Lecturer: Kim Ruhl*** | Tuesday, June 18th |
 | Lecture 6 (topic yet to be decided)| Thursday, June 20th | 
 (To get started with the Julia lectures, please set up with [Quantecon tutorial](https://julia.quantecon.org/getting_started_julia/getting_started.html#))
 
