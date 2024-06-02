@@ -20,6 +20,8 @@ website:
             href: Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb
           - text: "Lecture 5"
             href: Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb
+          - text: "Lecture 6"
+            href: Julia/Lectures/Julia_Lec_6_Compecon_Xing_Xu.ipynb
       - text: Python Lectures
         menu:
           - text: "Lecture 1"
