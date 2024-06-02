@@ -42,10 +42,10 @@ Here is the proposed timeline of the lectures. All lectures will be from 9:30 am
 | ---------- | -------- |
 | [Julia Fundamentals](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) | Tuesday, June 4th |
 | [Neoclassical growth model (RBC)](Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.ipynb) | Thursday, June 6th |
-| [McCall's Job search model ](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | Tuesday, June 11th |
+| [Root finding, Interpolation, and Continuous optimization](Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.ipynb) | Tuesday, June 11th |
 | [Incomplete market model with heterogeneous household](Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.ipynb) | Thursday, June 13th |
 | [Firm dynamics with an example of exporter dynamics](Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.ipynb) ***Guest Lecturer: Kim Ruhl*** | Tuesday, June 18th |
-| Lecture 6 (topic yet to be decided)| Thursday, June 20th | 
+| [McCall's Job search model](Julia/Lectures/Julia_Lec_6_Compecon_Xing_Xu.ipynb)| Thursday, June 20th | 
 (To get started with the Julia lectures, please set up with [Quantecon tutorial](https://julia.quantecon.org/getting_started_julia/getting_started.html#))
 
 | Python Lectures | Dates |
@@ -70,9 +70,6 @@ Here are the links to the assignments:
 | [Assignment 1](Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb) | June 10th |
 | [Assignment 2](Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb) | June 12th |
 | Assignment 3 | June 17th  |
-| Assignment 4 | June 19th |
-| Assignment 5 | June 24th |
-| Assignment 6 | June 26th | 
 
 | Python Assignments | Due Dates |
 | ---------- | -------- |
