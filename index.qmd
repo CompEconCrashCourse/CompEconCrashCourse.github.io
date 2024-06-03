@@ -23,7 +23,7 @@ Welcome to the 2024 summer course on computational economics at UMN! It will be 
 All the notebooks for lectures and assignments can be downloaded from [Github repo](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io). 
 
 ## Course Overview
-
+ 
 The course offerings are designed to cater to varying interests and skill levels. The [Julia lectures](Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.ipynb) will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. Lecture 5 on June 18th will feature ***Professor [Kim Ruhl](https://kimjruhl.com)*** as a guest lecturer to talk about the model part.
 
 In contrast, the [Python lectures](Python/Lectures/lecture1.ipynb) are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.
