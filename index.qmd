@@ -50,12 +50,12 @@ Here is the proposed timeline of the lectures. All lectures will be from 9:30 am
 
 | Python Lectures | Dates |
 | ---------- | -------- |
-| [Basics: Conditionals, Loops, Functions, etc.](Python/Lectures/lecture1.ipynb) | Monday, June 3rd |
-| [Nesting, Scope, and Lists](Python/Lectures/lecture2.ipynb) | Wednesday, June 5th |
-| [Tips & Tricks](Python/Lectures/lecture3.ipynb) | Monday, June 10th |
-| [Classes and Queues](Python/Lectures/lecture4.ipynb) | Wednesday, June 12th |
-| [Numpy](Python/Lectures/lecture5.ipynb) | Monday, June 17th |
-| Pandas | Wednesday, June 19th | 
+| [Basics: Conditionals, Loops, Functions, etc.](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture1.ipynb) | Monday, June 3rd |
+| [Nesting, Scope, and Lists](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture2.ipynb) | Wednesday, June 5th |
+| [Tips & Tricks](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture3.ipynb) | Monday, June 10th |
+| [Classes and Queues](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture4.ipynb) | Wednesday, June 12th |
+| [Numpy](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture5.ipynb) | Monday, June 17th |
+| Pandas | Wednesday, June 19th |
 
 ## Office Hours
 
