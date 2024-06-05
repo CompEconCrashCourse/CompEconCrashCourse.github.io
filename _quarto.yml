@@ -26,8 +26,8 @@ website:
         menu:
           - text: "Lecture 1"
             href: Python/Lectures/lecture1.ipynb
-          # - text: "Lecture 2"
-          #   href: Python/Lectures/lecture2.ipynb
+          - text: "Lecture 2"
+            href: Python/Lectures/lecture2.ipynb
           # - text: "Lecture 3"
           #   href: Python/Lectures/lecture3.ipynb
           # - text: "Lecture 4"
