@@ -52,10 +52,11 @@ Here is the proposed timeline of the lectures. All lectures will be from 9:30 am
 | ---------- | -------- |
 | [Basics: Conditionals, Loops, Functions, etc.](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture1.ipynb) | Monday, June 3rd |
 | [Nesting, Scope, and Lists](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture2.ipynb) | Wednesday, June 5th |
+| Assignment 1 Review | Friday, June 7th |
 | Tips & Tricks | Monday, June 10th |
-| Classes and Queues | Wednesday, June 12th |
+| Classes and Queues | Friday, June 14th |
 | Numpy | Monday, June 17th |
-| Pandas | Wednesday, June 19th |
+| Pandas | Friday, June 21st |
 
 ## Office Hours
 
@@ -73,9 +74,9 @@ Here are the links to the assignments:
 
 | Python Assignments | Due Dates |
 | ---------- | -------- |
-| [Assignment 1](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa1/index.html) | June 5th |
-| [Assignment 2](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa2/index.html) | June 10th |
-| [Assignment 3](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa3/index.html) | June 12th  |
-| [Assignment 4](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa4/index.html) | June 17th |
-| [Assignment 5](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa5/index.html) | June 19th |
-| Assignment 6 | June 24th | 
+| [Assignment 1](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa1/index.html) | Friday, June 7th |
+| [Assignment 2](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa2/index.html) | Monday, June 10th |
+| [Assignment 3](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa3/index.html) | Friday, June 14th  |
+| [Assignment 4](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa4/index.html) | Monday, June 17th |
+| [Assignment 5](https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa5/index.html) | Friday, June 21st |
+| Assignment 6 | Monday, June 24th | 
