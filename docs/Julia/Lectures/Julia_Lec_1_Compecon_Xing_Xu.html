@@ -794,18 +794,8 @@ false == 0 = true</code></pre>
  4.0</code></pre>
 </div>
 </div>
-<p>However this sometimes creates confusions. We can input a matrix or a float and still get out results:</p>
-<div id="cell-81" class="cell" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> [<span class="fl">2</span> <span class="fl">2</span>; <span class="fl">2</span> <span class="fl">2</span>]</span>
-<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="fu">g</span>(m1, <span class="fl">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2×2 Matrix{Int64}:
- 4  4
- 4  4</code></pre>
-</div>
-</div>
-<div id="cell-82" class="cell" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">g</span>(<span class="fl">2.0</span>, <span class="fl">2</span>) <span class="co"># Note that 2.0 is not even technically a vector and the output becomes a 0-dimensional Array</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-80" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">g</span>(<span class="fl">2.0</span>, <span class="fl">2</span>) <span class="co"># this doesn't work </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>MethodError: MethodError: no method matching similar(::Float64)
 
@@ -817,6 +807,16 @@ Closest candidates are:
   similar(!Matched::Union{Adjoint{T, S}, Transpose{T, S}} where {T, S})
    @ LinearAlgebra ~/Applications/Julia-1.9.3.app/Contents/Resources/julia/share/julia/stdlib/v1.9/LinearAlgebra/src/adjtrans.jl:333
   ...</code></pre>
+</div>
+</div>
+<p>However this sometimes creates confusions. We can input a matrix and still get out results:</p>
+<div id="cell-82" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>m1 <span class="op">=</span> [<span class="fl">2</span> <span class="fl">2</span>; <span class="fl">2</span> <span class="fl">2</span>]</span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="fu">g</span>(m1, <span class="fl">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>2×2 Matrix{Int64}:
+ 4  4
+ 4  4</code></pre>
 </div>
 </div>
 <p>This is why Quantecon stresses the importance for generic programming. See <a href="https://julia.quantecon.org/getting_started_julia/introduction_to_types.html#">Quantecon 5</a> and <a href="https://julia.quantecon.org/more_julia/generic_programming.html">Quantecon 6</a> for details. In short, you should avoid specifying particular types unless necessary and let your codes be compatible with different types.</p>

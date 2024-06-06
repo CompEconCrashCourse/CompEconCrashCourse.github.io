@@ -270,25 +270,32 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="a-canonical-neo-classical-growth-model">2.1 A canonical Neo-classical growth model</h3>
 <section id="environment" class="level4">
 <h4 class="anchored" data-anchor-id="environment">2.1.1 Environment</h4>
-<p>An economy is composed of * An infinitely lived representative household whose preferences are represented by a utility function <span class="math inline">\(u(c) = \sum_{t=0}^\infty \beta^t u(c_t)\)</span>, where <span class="math inline">\(\beta \in (0, 1)\)</span> is the discount factor. The household inelastically supplies 1 unit of labor each period. * A firm with technology <span class="math inline">\(y_t = F(k_t, l_t)\)</span>. That is, for each period, firm transforms current capital stock and labor supply into <span class="math inline">\(y_t\)</span> units of goods. * Standard law of motion for investment holds: <span class="math inline">\(x_t = k_{t+1} - (1 - \delta) k_t\)</span>, where <span class="math inline">\(\delta_t \in (0, 1]\)</span> is the depreciation factor. * The initial capital stock <span class="math inline">\(k_0\)</span> is given.</p>
+<p>An economy is composed of</p>
+<ul>
+<li><p>An infinitely lived representative household whose preferences are represented by a utility function <span class="math inline">\(u(c) = \sum_{t=0}^\infty \beta^t u(c_t)\)</span>, where <span class="math inline">\(\beta \in (0, 1)\)</span> is the discount factor. The household inelastically supplies 1 unit of labor each period.</p></li>
+<li><p>A firm with technology <span class="math inline">\(y_t = F(k_t, l_t)\)</span>. That is, for each period, firm transforms current capital stock and labor supply into <span class="math inline">\(y_t\)</span> units of goods.</p></li>
+<li><p>Standard law of motion for investment holds: <span class="math inline">\(x_t = k_{t+1} - (1 - \delta) k_t\)</span>, where <span class="math inline">\(\delta_t \in (0, 1]\)</span> is the depreciation factor.</p></li>
+<li><p>The initial capital stock <span class="math inline">\(k_0\)</span> is given.</p></li>
+</ul>
 <p>Therefore, total feasibility constraint for the economy is thus <span class="math inline">\(c_t + x_t \leq F(k_t, l_t), \forall t\)</span>, which is equivalent to <span class="math inline">\(c_t + k_{t+1} \leq F(k_t, l_t) + (1 - \delta) k_t, \forall t\)</span>.</p>
 </section>
 <section id="social-planners-problem" class="level4">
 <h4 class="anchored" data-anchor-id="social-planners-problem">2.1.2 Social Planner’s problem</h4>
 <p>Under some assumptions, we can use the <strong>social planner’s problem</strong> to characterize the Pareto Optimal allocations (<span class="math inline">\(l_t = 1\)</span> substituted in): <span class="math display">\[\begin{align*}
     \max_{\{c_t, k_{t+1}\}_{t=0}^\infty} &amp;\sum_{t=0}^\infty \beta^t u(c_t) \\
-    \text{subject to } c_t + k_{t+1} &amp;\leq F(k_t, 1) + (1 - \delta) k_t, \forall t\\
+    \text{subject to } &amp; c_t + k_{t+1} \leq F(k_t, 1) + (1 - \delta) k_t, \forall t\\
     c_t, k_{t+1} \geq 0, \forall t,  &amp; \quad k_0 \text{ given }
 \end{align*}\]</span></p>
 </section>
 <section id="question-how-to-solve-this" class="level4">
 <h4 class="anchored" data-anchor-id="question-how-to-solve-this">2.1.3 Question: how to solve this?</h4>
 <p>For simplicity, let’s assume utility is CRRA: <span class="math inline">\(u(c_t) = \frac{c_t^{1 - \sigma}}{1 - \sigma}\)</span> (<span class="math inline">\(\sigma &gt; 0, \sigma \neq 1\)</span>) and production function is Cobb-Douglas: <span class="math inline">\(F(k_t, l_t) = A k_t^\alpha l_t^{1-\alpha}\)</span>. Now intuitively, we have a strictly concave function maximizing on a convex set, which should give unique solution to the maximization problem (not rigid).</p>
-One attempt is to set up Lagrangian and take first order conditions (by Inada condition we know the solution is interior):
-<span class="math display">\[\begin{cases}
+<p>One attempt is to set up Lagrangian and take first order conditions (by Inada condition we know the solution is interior): <span class="math display">\[
+\begin{cases}
 \beta^t c_t^{-\sigma} = \lambda_t\\
 \lambda_t = \lambda_{t+1}(A \alpha k_{t+1}^{\alpha - 1} + (1 - \delta) )\\
-\end{cases}\]</span>
+\end{cases}
+\]</span></p>
 <p>which gives the famous Euler Equation, <span class="math display">\[
 c_t^{-\sigma} = \beta c_{t+1}^{-\sigma}(A \alpha k_{t+1}^{\alpha - 1} + (1 - \delta) )
 \]</span></p>
@@ -442,25 +449,22 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">elseif</span> v_tmp <span class="op">&gt;</span> vmax </span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>                        pol_i <span class="op">=</span> j</span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>                        vmax <span class="op">=</span> v_tmp</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>VFI_baseline (generic function with 1 method)</code></pre>
 </div>
@@ -642,25 +646,22 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 <span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">elseif</span> v_tmp <span class="op">&gt;</span> vmax </span>
 <span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a>                        pol_i <span class="op">=</span> j</span>
 <span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>                        vmax <span class="op">=</span> v_tmp</span>
-<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
-<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
-<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
-<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
-<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
-<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
-<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
-<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
-<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
-<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
-<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
-<span id="cb23-53"><a href="#cb23-53" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
+<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
+<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
+<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>VFI_baseline_v2 (generic function with 1 method)</code></pre>
 </div>
@@ -707,25 +708,22 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 <span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">elseif</span> v_tmp <span class="op">&gt;</span> vmax </span>
 <span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>                        pol_i <span class="op">=</span> j</span>
 <span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>                        vmax <span class="op">=</span> v_tmp</span>
-<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
-<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
-<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
-<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
-<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
-<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
-<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
-<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
-<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
-<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
-<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
-<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
-<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>VFI_baseline_v3 (generic function with 1 method)</code></pre>
 </div>
@@ -791,25 +789,22 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 <span id="cb37-27"><a href="#cb37-27" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">elseif</span> v_tmp <span class="op">&gt;</span> vmax </span>
 <span id="cb37-28"><a href="#cb37-28" aria-hidden="true" tabindex="-1"></a>                        pol_i <span class="op">=</span> j</span>
 <span id="cb37-29"><a href="#cb37-29" aria-hidden="true" tabindex="-1"></a>                        vmax <span class="op">=</span> v_tmp</span>
-<span id="cb37-30"><a href="#cb37-30" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
-<span id="cb37-31"><a href="#cb37-31" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
-<span id="cb37-32"><a href="#cb37-32" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
-<span id="cb37-33"><a href="#cb37-33" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
-<span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb37-35"><a href="#cb37-35" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb37-36"><a href="#cb37-36" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
-<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
-<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
-<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
-<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb37-42"><a href="#cb37-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
-<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
-<span id="cb37-45"><a href="#cb37-45" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
-<span id="cb37-46"><a href="#cb37-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb37-47"><a href="#cb37-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
-<span id="cb37-48"><a href="#cb37-48" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb37-30"><a href="#cb37-30" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
+<span id="cb37-31"><a href="#cb37-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb37-32"><a href="#cb37-32" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb37-33"><a href="#cb37-33" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
+<span id="cb37-34"><a href="#cb37-34" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
+<span id="cb37-35"><a href="#cb37-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
+<span id="cb37-36"><a href="#cb37-36" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
+<span id="cb37-37"><a href="#cb37-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb37-38"><a href="#cb37-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb37-39"><a href="#cb37-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-40"><a href="#cb37-40" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
+<span id="cb37-41"><a href="#cb37-41" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb37-42"><a href="#cb37-42" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
+<span id="cb37-43"><a href="#cb37-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb37-44"><a href="#cb37-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
+<span id="cb37-45"><a href="#cb37-45" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>VFI_baseline_v4 (generic function with 1 method)</code></pre>
 </div>
@@ -884,25 +879,27 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 <span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">elseif</span> v_tmp <span class="op">&gt;</span> vmax </span>
 <span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a>                        pol_i <span class="op">=</span> j</span>
 <span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>                        vmax <span class="op">=</span> v_tmp</span>
-<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
-<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
-<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
-<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
-<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
-<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
-<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
-<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
-<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb44-43"><a href="#cb44-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb44-44"><a href="#cb44-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-45"><a href="#cb44-45" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
-<span id="cb44-46"><a href="#cb44-46" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
-<span id="cb44-47"><a href="#cb44-47" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
-<span id="cb44-48"><a href="#cb44-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
-<span id="cb44-49"><a href="#cb44-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
-<span id="cb44-50"><a href="#cb44-50" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>                    <span class="co">###################### Here ###########################</span></span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span></span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">break</span> <span class="co">#only break out of the most inner loop</span></span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">end</span></span>
+<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a>                    <span class="co">###################### Here ###########################</span></span>
+<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a>                <span class="cf">end</span></span>
+<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a>            v1[i] <span class="op">=</span> vmax <span class="co">#update maximized value</span></span>
+<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a>            pol[i] <span class="op">=</span> pol_i <span class="co">#update policy function</span></span>
+<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> distance <span class="op">&lt;</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i])</span>
+<span id="cb44-43"><a href="#cb44-43" aria-hidden="true" tabindex="-1"></a>                distance <span class="op">=</span> <span class="fu">abs</span>(vmax <span class="op">-</span> v[i]) <span class="co">#update distance</span></span>
+<span id="cb44-44"><a href="#cb44-44" aria-hidden="true" tabindex="-1"></a>            <span class="cf">end</span></span>
+<span id="cb44-45"><a href="#cb44-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb44-46"><a href="#cb44-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-47"><a href="#cb44-47" aria-hidden="true" tabindex="-1"></a>        (distance <span class="op">&lt;</span> tol <span class="op">||</span> iterate <span class="op">==</span> <span class="fl">1000</span>) <span class="op">&amp;&amp;</span> <span class="cf">break</span> <span class="co"># break out the whole loop if one of the statements are true</span></span>
+<span id="cb44-48"><a href="#cb44-48" aria-hidden="true" tabindex="-1"></a>        iterate <span class="op">+=</span> <span class="fl">1</span></span>
+<span id="cb44-49"><a href="#cb44-49" aria-hidden="true" tabindex="-1"></a>        v<span class="op">.=</span> v1<span class="co"># update the value, equivalently v = copy(v1)</span></span>
+<span id="cb44-50"><a href="#cb44-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb44-51"><a href="#cb44-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (v<span class="op">=</span>v, pol<span class="op">=</span>pol, iterate<span class="op">=</span>iterate)</span>
+<span id="cb44-52"><a href="#cb44-52" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>VFI_baseline_v5 (generic function with 1 method)</code></pre>
 </div>
@@ -934,13 +931,18 @@ T(V)(k) = \max_{k' \in \Gamma(k)} \{u(F(k, 1) + (1 - \delta) k - k') + \beta V(k
 </div>
 <p>The code is absurdly 36.5 times faster (would be even larger difference if N is larger).</p>
 <p>What happened?</p>
-<p>Note that before when I was iterating k’ I used</p>
+<p><strong><em>First modification:</em></strong> Note that before when I was iterating k’ I used</p>
 <p><code>for j in eachindex(k)</code>,</p>
 <p>which, in this environment is equivalent to</p>
 <p><code>for j in 1:N</code>.</p>
 <p>However, now the code writes</p>
 <p><code>for j in pol_i:N</code>.</p>
 <p>Instead of the beginning, I start from the policy function of the last i. Why doing this still yield the same result? It is due to strictly increasing policy function. If <span class="math inline">\(g(k[i]) = k\)</span>[pol_i], then <span class="math inline">\(g(k[i + 1]) ≥  k\)</span>[pol_i], so we can start from the previous policy. This is a huge gain of efficiency.</p>
+<p><strong><em>Second modification:</em></strong></p>
+<p>From the graph of the value function, you see that it is strictly concave in <span class="math inline">\(k\)</span>. This means that when I update my guess of <span class="math inline">\(V(k)\)</span> when searching monotonically along <span class="math inline">\(k'\)</span>, I can stop when the RHS of Bellman equation starts dropping.</p>
+<p>This is what</p>
+<p><code>else \\ break #only break out of the most inner loop end</code></p>
+<p>does.</p>
 </section>
 <section id="vectorization" class="level4">
 <h4 class="anchored" data-anchor-id="vectorization">2.4 Vectorization</h4>
