@@ -54,6 +54,7 @@ Here is the proposed timeline of the lectures. All lectures will be from 9:30 am
 | [Nesting, Scope, and Lists](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture2.ipynb) | Wednesday, June 5th |
 | Assignment 1 Review | Friday, June 7th |
 | [Tips & Tricks](https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture3.ipynb) | Monday, June 10th |
+| Assignment 2 Review | Wednesday, June 12th |
 | Classes and Queues | Friday, June 14th |
 | Numpy | Monday, June 17th |
 | Pandas | Friday, June 21st |
