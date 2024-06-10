@@ -69,8 +69,8 @@ Here are the links to the assignments:
 | Julia Assignments | Due Dates |
 | ---------- | -------- |
 | [Assignment 1](Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.ipynb) | June 10th |
-| [Assignment 2](Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb) | June 12th |
-| Assignment 3 | June 17th  |
+| [Assignment 2](Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.ipynb) | June 17th |
+| Assignment 3 | June 24th  |
 
 | Python Assignments | Due Dates |
 | ---------- | -------- |
