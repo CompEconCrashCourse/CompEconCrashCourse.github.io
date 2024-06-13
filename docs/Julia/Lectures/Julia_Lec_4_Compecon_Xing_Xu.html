@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CompEconUMN2024 - Lecture 4: Incomplete market models with transition dynamics</title>
+<title>CompEconUMN2024 - Lecture 4: The Aiyagari Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -241,13 +241,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general-set-up-of-the-aiyagari-model" id="toc-general-set-up-of-the-aiyagari-model" class="nav-link active" data-scroll-target="#general-set-up-of-the-aiyagari-model">General set up of the Aiyagari model</a></li>
-  <li><a href="#recursive-formulation-of-the-household-problem" id="toc-recursive-formulation-of-the-household-problem" class="nav-link" data-scroll-target="#recursive-formulation-of-the-household-problem">Recursive formulation of the household problem</a></li>
-  <li><a href="#computing-the-bewleyhugget-model" id="toc-computing-the-bewleyhugget-model" class="nav-link" data-scroll-target="#computing-the-bewleyhugget-model">Computing the Bewley/Hugget Model</a></li>
-  <li><a href="#recursive-competitive-equilibrium-aiyagari-1994" id="toc-recursive-competitive-equilibrium-aiyagari-1994" class="nav-link" data-scroll-target="#recursive-competitive-equilibrium-aiyagari-1994">Recursive competitive equilibrium (Aiyagari 1994)</a></li>
-  <li><a href="#stationary-competitive-equilibrium" id="toc-stationary-competitive-equilibrium" class="nav-link" data-scroll-target="#stationary-competitive-equilibrium">Stationary Competitive Equilibrium</a></li>
-  <li><a href="#transition-dynamics-for-incomplete-market" id="toc-transition-dynamics-for-incomplete-market" class="nav-link" data-scroll-target="#transition-dynamics-for-incomplete-market">Transition dynamics for incomplete market</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#general-set-up-of-the-aiyagari-model" id="toc-general-set-up-of-the-aiyagari-model" class="nav-link active" data-scroll-target="#general-set-up-of-the-aiyagari-model">1.General set up of the Aiyagari model</a></li>
+  <li><a href="#recursive-formulation-of-the-household-problem" id="toc-recursive-formulation-of-the-household-problem" class="nav-link" data-scroll-target="#recursive-formulation-of-the-household-problem">2. Recursive formulation of the household problem</a></li>
+  <li><a href="#recursive-competitive-equilibrium-aiyagari-1994" id="toc-recursive-competitive-equilibrium-aiyagari-1994" class="nav-link" data-scroll-target="#recursive-competitive-equilibrium-aiyagari-1994">3. Recursive competitive equilibrium (Aiyagari 1994)</a></li>
+  <li><a href="#transition-dynamics-for-incomplete-market-extended-reading" id="toc-transition-dynamics-for-incomplete-market-extended-reading" class="nav-link" data-scroll-target="#transition-dynamics-for-incomplete-market-extended-reading">4. Transition dynamics for incomplete market (extended reading)</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">5. Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -256,7 +254,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 4: Incomplete market models with transition dynamics</h1>
+<h1 class="title">Lecture 4: The Aiyagari Model</h1>
 </div>
 
 
@@ -273,12 +271,12 @@ window.Quarto = {
 </header>
 
 
-<p>In this lecture, I introduce the basic set-up of the workhorse incomplete market model – the Aiyagari model and discuss how to compute it numerically. When writing this lecture, I largely follow from my answer for problem set 3 and 4 for Manuel Amador’s Macro class.</p>
+<p>In this lecture, I will introduce the basic set-up of the workhorse incomplete market model – the Aiyagari (1996) model and discuss how to compute it numerically. When writing this lecture, I largely follow from my answer for problem set 3 and 4 for Manuel Amador’s Macro class.</p>
 <p>Useful notes: Jesus Fernandez-Villaverde’s notes on heterogeneous agent models: <a href="https://www.sas.upenn.edu/~jesusfv/Lecture_Heterogeneous_I.pdf">part 1</a>, <a href="https://www.sas.upenn.edu/~jesusfv/Lecture_Heterogeneous_II.pdf">part 2</a>, <a href="https://www.sas.upenn.edu/~jesusfv/Lecture_Heterogeneous_III.pdf">part 3</a>.</p>
 <section id="general-set-up-of-the-aiyagari-model" class="level3">
-<h3 class="anchored" data-anchor-id="general-set-up-of-the-aiyagari-model">General set up of the Aiyagari model</h3>
+<h3 class="anchored" data-anchor-id="general-set-up-of-the-aiyagari-model">1.General set up of the Aiyagari model</h3>
 <section id="environment" class="level4">
-<h4 class="anchored" data-anchor-id="environment">Environment:</h4>
+<h4 class="anchored" data-anchor-id="environment">1.1 Environment:</h4>
 <section id="household" class="level5">
 <h5 class="anchored" data-anchor-id="household">Household:</h5>
 <p>Continuum of household with mass 1:</p>
@@ -308,21 +306,20 @@ C_t + K_{t+1} - (1 - \delta) K_t = F(K_t, L)
 </section>
 </section>
 <section id="recursive-formulation-of-the-household-problem" class="level3">
-<h3 class="anchored" data-anchor-id="recursive-formulation-of-the-household-problem">Recursive formulation of the household problem</h3>
+<h3 class="anchored" data-anchor-id="recursive-formulation-of-the-household-problem">2. Recursive formulation of the household problem</h3>
 <p>Assume utility is strictly increasing. Taking the interest rate <span class="math inline">\(R\)</span> and <span class="math inline">\(w\)</span> as given, the household problem takes the recursive form:</p>
 <p><span class="math inline">\(V(a, s) = \max_{a'\geq \phi} u(Ra + w l(s) - a') + \beta E[V(a', s')]\)</span></p>
 <p>where <span class="math inline">\(s\)</span> is the realization of the labor endowment today.</p>
 <section id="side-notes-on-alternative-specification-of-the-household-problem" class="level4">
-<h4 class="anchored" data-anchor-id="side-notes-on-alternative-specification-of-the-household-problem">Side notes on alternative specification of the household problem:</h4>
+<h4 class="anchored" data-anchor-id="side-notes-on-alternative-specification-of-the-household-problem">2.1 Side notes on alternative specification of the household problem:</h4>
 <p><em>Alternatively we can write the problem as <span class="math inline">\(V(x, s) = \max_{a'\geq \phi} u(x - a') + \beta E[V(Ra' + w l(s'), s')]\)</span>, where <span class="math inline">\(x \equiv Ra + w l(s)\)</span> is the cash in hand today. Note that the value function will be different as it is now a function of <span class="math inline">\(x\)</span>. The key here is that one need to make sure that the state variables on both sides are consistent.</em></p>
 <p><em>On top of this, Aiyagari used a trick to simplify the problem. Define <span class="math inline">\(\hat{a} = a + \phi\)</span>, <span class="math inline">\(\hat{x} = x + \phi\)</span>. Then, the household problem can be rewritten as:</em></p>
 <p><em><span class="math inline">\(v(\hat{x}, s) = \max_{\hat{a}' \geq 0} u(\hat{x} - \hat{a}') + \beta E[v(R\hat{a}' + w l(s') - (R - 1) \phi), s']\)</span></em></p>
 <p><br></p>
 <p>Now let’s try to solve the household problem using <span class="math inline">\(a\)</span> as the first state variable given particular <span class="math inline">\(R\)</span> and <span class="math inline">\(w\)</span>. This is essentially a partial equilibrium and is often referred to as a Bewley/Hugget model.</p>
 </section>
-</section>
-<section id="computing-the-bewleyhugget-model" class="level3">
-<h3 class="anchored" data-anchor-id="computing-the-bewleyhugget-model">Computing the Bewley/Hugget Model</h3>
+<section id="computing-the-household-problem" class="level4">
+<h4 class="anchored" data-anchor-id="computing-the-household-problem">2.2 Computing the household problem</h4>
 <p>Note that here only the product of <span class="math inline">\(w\)</span> and <span class="math inline">\(l\)</span> matters here and there’s no interesting mechanism for determining <span class="math inline">\(w\)</span>. For simplicity, we define <span class="math inline">\(y(s) \equiv wl(s)\)</span> such that <span class="math inline">\(V(a, s) = \max_{a'\geq \phi} u(Ra + y(s) - a') + \beta E[V(a', s')]\)</span>. Further assume <span class="math inline">\(s\)</span> follows a first-order markov chain governed by states <span class="math inline">\(y(s)\)</span> and transition matrix <span class="math inline">\(P\)</span>.</p>
 <p>We will construct grids using <span class="math inline">\(a\)</span>. Let <span class="math inline">\(a\)</span> start from <span class="math inline">\(\phi\)</span> so the agent cannot over-borrow.</p>
 <p>The following codes are adopted from problem set 2 and 3 from Manuel Amador’s Macro class.</p>
@@ -582,13 +579,14 @@ C_t + K_{t+1} - (1 - \delta) K_t = F(K_t, L)
 </div>
 <p>Note that when <span class="math inline">\(y\)</span> is low. The policy function for <span class="math inline">\(a'\)</span> is flat. The intuition is that the agent has incentive to borrow for consumption smoothing when endowment is low (why?) but is borrowing constrained due to the <span class="math inline">\(0\)</span> borrowing limit. As a result, the agent consumes all her endowment. This is sometimes referred to as “Hand-to-mouth” consumption.</p>
 </section>
+</section>
 <section id="recursive-competitive-equilibrium-aiyagari-1994" class="level3">
-<h3 class="anchored" data-anchor-id="recursive-competitive-equilibrium-aiyagari-1994">Recursive competitive equilibrium (Aiyagari 1994)</h3>
+<h3 class="anchored" data-anchor-id="recursive-competitive-equilibrium-aiyagari-1994">3. Recursive competitive equilibrium (Aiyagari 1994)</h3>
 <p>With some understanding of the partial equilibrium, we now try to build towards the general equilibrium. With household optimality, firm optimality and market clearing conditions, the equilibrium can be formally defined by a recursive competitive equilibrium.</p>
 <p>The key difference is that every household now needs to know the distribution of everyone else’s asset holdings to infer future interest rate.</p>
 <p>Let <span class="math inline">\(a \in A \equiv [\phi, \infty]\)</span>, <span class="math inline">\(s \in S\)</span>. From the recursive form of the household problem, for given R we can solve for a value function <span class="math inline">\(v(a, s): A \times S \to R\)</span> and a policy function for saving <span class="math inline">\(g(a, s): A \times S \to A\)</span>.</p>
 <section id="prices-in-general-equilibrium" class="level4">
-<h4 class="anchored" data-anchor-id="prices-in-general-equilibrium">Prices in general equilibrium</h4>
+<h4 class="anchored" data-anchor-id="prices-in-general-equilibrium">3.1 Prices in general equilibrium</h4>
 <p>Now for simplicity, let the firm technology be characterized by a CRS Cobb-Douglas production function, i.e. <span class="math display">\[
 Y_t = A K_t^\alpha L_t^{1 - \alpha}.
 \]</span></p>
@@ -605,11 +603,8 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 \]</span></p>
 <p>This is very handy when it comes to computing the equilibrium prices.</p>
 </section>
-</section>
-<section id="stationary-competitive-equilibrium" class="level3">
-<h3 class="anchored" data-anchor-id="stationary-competitive-equilibrium">Stationary Competitive Equilibrium</h3>
 <section id="set-up-of-a-recursive-stationary-competitive-equilibrium" class="level4">
-<h4 class="anchored" data-anchor-id="set-up-of-a-recursive-stationary-competitive-equilibrium">Set up of a (recursive) stationary competitive equilibrium</h4>
+<h4 class="anchored" data-anchor-id="set-up-of-a-recursive-stationary-competitive-equilibrium">3.2 Set up of a (recursive) stationary competitive equilibrium</h4>
 <p>A stationary competitive equilibrium is defined by a system of constant prices (interest rate and wage) and allocations such that individuals optimize and markets clear.</p>
 <p>Define <span class="math inline">\(\lambda_t(a, s): A \times S \to [0,1]\)</span> to be the distribution of household over current asset <span class="math inline">\(a\)</span> and state <span class="math inline">\(s\)</span>. Imagine it to be a matrix with each entry filled with the fraction of household with each combination of possible <span class="math inline">\(a\)</span> and <span class="math inline">\(s\)</span>. Hypothetically, this should evolve over time following a law of motion: <span class="math display">\[
 \lambda_{t+1}(a', s') = \sum_{s \in S} \sum_{a: g(a,s) = a'} \pi(s'|s) \lambda_t(a,s), \quad \forall a', s'
@@ -843,6 +838,7 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 <path clip-path="url(#clip340)" d="M2188.62 160.449 L2188.62 174.199 L2184.34 174.199 L2184.34 138.412 L2188.62 138.412 L2188.62 142.347 Q2189.96 140.032 2192 138.921 Q2194.06 137.787 2196.91 137.787 Q2201.63 137.787 2204.57 141.537 Q2207.53 145.287 2207.53 151.398 Q2207.53 157.509 2204.57 161.259 Q2201.63 165.009 2196.91 165.009 Q2194.06 165.009 2192 163.898 Q2189.96 162.763 2188.62 160.449 M2203.11 151.398 Q2203.11 146.699 2201.17 144.037 Q2199.24 141.352 2195.86 141.352 Q2192.48 141.352 2190.54 144.037 Q2188.62 146.699 2188.62 151.398 Q2188.62 156.097 2190.54 158.782 Q2192.48 161.444 2195.86 161.444 Q2199.24 161.444 2201.17 158.782 Q2203.11 156.097 2203.11 151.398 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip340)" d="M2231.65 142.347 L2231.65 128.319 L2235.91 128.319 L2235.91 164.338 L2231.65 164.338 L2231.65 160.449 Q2230.31 162.763 2228.25 163.898 Q2226.21 165.009 2223.34 165.009 Q2218.64 165.009 2215.68 161.259 Q2212.74 157.509 2212.74 151.398 Q2212.74 145.287 2215.68 141.537 Q2218.64 137.787 2223.34 137.787 Q2226.21 137.787 2228.25 138.921 Q2230.31 140.032 2231.65 142.347 M2217.14 151.398 Q2217.14 156.097 2219.06 158.782 Q2221 161.444 2224.38 161.444 Q2227.76 161.444 2229.71 158.782 Q2231.65 156.097 2231.65 151.398 Q2231.65 146.699 2229.71 144.037 Q2227.76 141.352 2224.38 141.352 Q2221 141.352 2219.06 144.037 Q2217.14 146.699 2217.14 151.398 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path><path clip-path="url(#clip340)" d="M2257.81 128.319 L2257.81 131.861 L2253.73 131.861 Q2251.44 131.861 2250.54 132.787 Q2249.66 133.713 2249.66 136.12 L2249.66 138.412 L2256.67 138.412 L2256.67 141.722 L2249.66 141.722 L2249.66 164.338 L2245.38 164.338 L2245.38 141.722 L2241.3 141.722 L2241.3 138.412 L2245.38 138.412 L2245.38 136.606 Q2245.38 132.278 2247.39 130.31 Q2249.41 128.319 2253.78 128.319 L2257.81 128.319 Z" fill="#000000" fill-rule="nonzero" fill-opacity="1"></path></svg>
 </div>
 </div>
+<p>The PDF is not super smooth due to computational errors. You can try adding more grids (doesn’t work very well), but the better method is to use continuous optimization. Keep in mind the numerical errors from here. It will come back later.</p>
 <p>Of course you can also plot the CDF.</p>
 <div id="cell-30" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sol_2.h.a_grid, <span class="fu">cumsum</span>(<span class="fu">sum</span>(pdfA, dims <span class="op">=</span> <span class="fl">2</span>)[<span class="op">:</span>, <span class="fl">1</span>]), label <span class="op">=</span> <span class="st">"cdf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -920,7 +916,7 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 </div>
 </section>
 <section id="the-capital-demand-and-supply-curve" class="level4">
-<h4 class="anchored" data-anchor-id="the-capital-demand-and-supply-curve">The capital demand and supply curve</h4>
+<h4 class="anchored" data-anchor-id="the-capital-demand-and-supply-curve">3.3 The capital demand and supply curve</h4>
 <p>Since the aggregate labor supply <span class="math inline">\(L\)</span> is a constant as we have argued, the only equilibrium object that has to been determined endogenously is the market clearing capital (or asset). Now, the equilibrium interest rate <span class="math inline">\(R = AαK^{α - 1} L^{1 - α} + 1 - δ\)</span> is a one-to-one function of <span class="math inline">\(K\)</span>. The inverse function <span class="math inline">\(K(R)\)</span> gives the capital demand curve, which is continuous and downward sloping. From the household problem, given each R, we can endogenously solve out the asset supply curve with the invariant distribution of household, which will be continuous and upward sloping. I denote the supply as <span class="math inline">\(A(R)\)</span>. The unique intersection of <span class="math inline">\(K(R)\)</span> and <span class="math inline">\(A(R)\)</span> gives out the equilibrium capital and the corresponding interest rate.</p>
 <p>The following function solves out the aggregate asset supply and capital demand over a grid of possible equilibrium interest rate <span class="math inline">\(R\)</span>.</p>
 <div id="cell-35" class="cell" data-execution_count="20">
@@ -1030,7 +1026,7 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 <p><strong>Challenge for solving the equilibrium</strong>:</p>
 </section>
 <section id="solving-the-stationary-competitive-equilibrium" class="level4">
-<h4 class="anchored" data-anchor-id="solving-the-stationary-competitive-equilibrium">Solving the stationary competitive equilibrium</h4>
+<h4 class="anchored" data-anchor-id="solving-the-stationary-competitive-equilibrium">3.4 Solving the stationary competitive equilibrium</h4>
 <p>Now we have everything ready to compute the stationary competitive equilibrium.</p>
 <p>The algorithm goes as follows:</p>
 <ul>
@@ -1180,7 +1176,7 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 </div>
 </section>
 <section id="what-properties-are-important-for-solving-the-stationary-equilibrium" class="level4">
-<h4 class="anchored" data-anchor-id="what-properties-are-important-for-solving-the-stationary-equilibrium">What properties are important for solving the stationary equilibrium?</h4>
+<h4 class="anchored" data-anchor-id="what-properties-are-important-for-solving-the-stationary-equilibrium">3.5 What properties are important for solving the stationary equilibrium?</h4>
 <p>Originally the value that labor endowment process takes are 2 and 4, with same transition probability (now it’s 1 and 5). We can see that the algorithm for solving the stationary equilibrium doesn’t converge.</p>
 <div id="cell-49" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>h_GE1 <span class="op">=</span> <span class="fu">Household_GE</span>(l <span class="op">=</span> [<span class="fl">2.0</span>, <span class="fl">4.0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1260,22 +1256,22 @@ w_t(R_t) = A^{\frac{1}{1-\alpha}} (1 - \alpha) \alpha^{\frac{\alpha}{1 - \alpha}
 </div>
 </div>
 <p>Recall that 100 is the upper bound we set for the total iterations. You can change it to higher value but in short you don’t get convergence. It is also often the case with other parameter choices as long as the asset supply curve is steep around where equilibrium lies around, i.e.&nbsp;the elasticity for interest rate is high.</p>
-<p>Why this is troublesome? Now because the aggregate asset supply rises sharply where <span class="math inline">\(R\)</span> is close to the equilibrium, to find an equilibrium we need good approximations of the policy function around where it matters. However recall that we used even grids for the assets, which causes inaccuracy of the policy function as we simply don’t have enough points where it truly matters. Again this is just due to approximation errors, which can be resolved from more grids around the equilibrium. One possible solution is <a href="https://julia.quantecon.org/dynamic_programming/egm_policy_iter.html">endogenous grid methods</a>.</p>
-<p>For our purpose, we can just make the asset supply less elastic. That’s why I make the possible values of labor endowments wider. The reason this works goes back to the very nature of the “incompleteness” of the model. Household can’t insure against all future risks, so they have to save more than in a complete market due to strict concavity of utility. This is called precautionary saving. When the labor endowments get more fluctuant, either through wider values or smaller autocorrelation, the household saves more due to this motive. Fixing other parameters, households’ saving behavior is more driven by the uncertainty of the income shock.</p>
+<p>Why this is troublesome? Now because the aggregate asset supply rises sharply where <span class="math inline">\(R\)</span> is close to the equilibrium, to find an equilibrium we need good approximations of the policy function around where it matters. However recall that we used even grids for the assets, which causes inaccuracy of the policy function as we simply don’t have enough points where it truly matters. Again this is just due to approximation errors. A naive way to resolve it is to put more grids around the equilibrium point. A better alternative is to simply obtain better precisions with continuous optimization method (you are asked to perform this in the assignment 4). (For enthusiasts, another possible solution is <a href="https://julia.quantecon.org/dynamic_programming/egm_policy_iter.html">endogenous grid methods</a>).</p>
+<p>For our purpose, we can just make the asset supply less elastic. That’s why I make the possible values of labor endowments wider. The reason this works goes back to the very nature of the “incompleteness” of the model. Household can’t insure against all future risks, so they have to save more than in a complete market due to strict concavity of utility. This is called precautionary saving motivation. When the labor endowments get more fluctuant, either through wider values or smaller autocorrelation, the household saves more due to this motive. Fixing other parameters, households’ saving behavior is more driven by the uncertainty of the income shock.</p>
+<p>In general, we should try to obtain better precisions through continuous optimizations (good exercise) and other computational techniques. An important lesson here is that precision does matter and you should always keep that in mind.</p>
 <p>For clarity, the key here lies in the comparison between the incentives to save due to precautionary saving and higher interest rate. Just for intuition, we enhanced the first channel and made the asset supply less elastic of the second.</p>
 <p>A final comment is that don’t be afraid when your code doesn’t work. Of course mostly it is some random mistakes and as long as you correct them, it is perfectly fine. More importantly, there are cases where something that doesn’t work actually teaches you a lesson, and often a most valuable one. Digging into some seemingly weird situations can provide valuable insights, as is the case here.</p>
 </section>
 </section>
-<section id="transition-dynamics-for-incomplete-market" class="level3">
-<h3 class="anchored" data-anchor-id="transition-dynamics-for-incomplete-market">Transition dynamics for incomplete market</h3>
-<p>Economists are often interested in the short-run response of agents given an unexpected one-time shock (often referred to as the MIT shock). Now we have the tools to compute the stationary competitive equilibrium. However as you can see, even under stationarity, this is a very complicated process.</p>
-<p>Assuming that households have perfect foresight over prices, this implies that household needs to know everyone else’s state today (knowing the distribution is sufficient) to infer the prices next period. In dynamic programming term, you need the whole distribution as an additional state variable. Note that the distribution is of very high dimensionality (here <span class="math inline">\(A \times s\)</span>), taking conditional expectation over this gigantic object is merely impossible.</p>
-<p>I put a simpler exercise based on a variation of the Hugget model in the exercise (adopted from Manuel’s problem set). One should be able to figure it out with the hints provided. I will provide a solution if you send me an email.</p>
+<section id="transition-dynamics-for-incomplete-market-extended-reading" class="level3">
+<h3 class="anchored" data-anchor-id="transition-dynamics-for-incomplete-market-extended-reading">4. Transition dynamics for incomplete market (extended reading)</h3>
+<p>Economists are often interested in the short-run response of agents given an unexpected one-time shock (often referred to as the MIT shock). Now we have the tools to compute the stationary competitive equilibrium. However as you can see, even under stationarity, this is a not very simple.</p>
+<p>Assuming that households don’t have perfect foresight over prices, this implies that household needs to know everyone else’s state today (knowing the distribution is sufficient) to estimate the prices next period. In dynamic programming term, you need the whole distribution as an additional state variable. Note that the distribution is of very high dimensionality (here <span class="math inline">\(A \times s\)</span>), taking conditional expectation over this gigantic object is merely impossible.</p>
 <p><a href="http://www.econ.yale.edu/smith/250034.pdf">Krussel Smith (1998)</a> is a very important contribution to the computation technique of the model. They are able to show that first order approximations over prices provide very accurate results because the policy function is close to linear when <span class="math inline">\(a\)</span> is not very low.</p>
-<p>The latest development of the field is the <a href="http://web.stanford.edu/~aauclert/sequence_space_jacobian.pdf">sequence Jacobian</a>. Auclert et al.&nbsp;provides a computation technique that is crazy fast.</p>
+<p>Some latest developments of the field is the <a href="http://web.stanford.edu/~aauclert/sequence_space_jacobian.pdf">sequence Jacobian</a>. Auclert et al.&nbsp;provides a computation technique that is crazy fast and the <a href="https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA16414">purtabation method</a> by Bhandari et al.</p>
 </section>
 <section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<h3 class="anchored" data-anchor-id="conclusion">5. Conclusion</h3>
 <p>Incomplete market models are the workhorse models in modern Macroeconomic research, particularly in Macro-Labor and Macro-Finance. Knowing how to compute the basic model is of vital importance. In this lecture I started with the partial equilibrium version of the heteorgeneous household saving model (known as a Bewley/Hugget model), then I built towards the general equilibrium version of the model (known as an Aiyagari model). This lecture serves more as an introduction to allude readers to dive deeper themselves.</p>
 
 
