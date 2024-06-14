@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Adam A. Oppenheimer">
-<meta name="author" content="Xing Xu">
 
-<title>CompEconUMN2024 - Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)</title>
+<title>CompEconUMN2024 - Lesson 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">CompEconUMN2024</span>
     </a>
   </div>
@@ -92,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,27 +133,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-julia-lectures">    
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Lectures/Julia_Lec_6_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Lectures/Julia_Lec_6_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Lecture 6</span></a>
   </li>  
     </ul>
@@ -132,19 +164,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-python-lectures">    
         <li>
-    <a class="dropdown-item" href="./Python/Lectures/lecture1.html">
+    <a class="dropdown-item" href="../../../Python/Lectures/lecture1.html">
  <span class="dropdown-text">Lecture 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Python/Lectures/lecture2.html">
+    <a class="dropdown-item" href="../../../Python/Lectures/lecture2.html">
  <span class="dropdown-text">Lecture 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Python/Lectures/lecture3.html">
+    <a class="dropdown-item" href="../../../Python/Lectures/lecture3.html">
  <span class="dropdown-text">Lecture 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Python/Lectures/lecture4.html">
+    <a class="dropdown-item" href="../../../Python/Lectures/lecture4.html">
  <span class="dropdown-text">Lecture 4</span></a>
   </li>  
     </ul>
@@ -155,11 +187,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-julia-assignments">    
         <li>
-    <a class="dropdown-item" href="./Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.html">
+    <a class="dropdown-item" href="../../../Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.html">
  <span class="dropdown-text">Assignment 2</span></a>
   </li>  
     </ul>
@@ -181,10 +213,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office Hours</a></li>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#classes" id="toc-classes" class="nav-link" data-scroll-target="#classes">1. Classes</a></li>
+  <li><a href="#queues" id="toc-queues" class="nav-link" data-scroll-target="#queues">2. Queues</a>
+  <ul class="collapse">
+  <li><a href="#standard-queues" id="toc-standard-queues" class="nav-link" data-scroll-target="#standard-queues">2.1 Standard queues</a></li>
+  <li><a href="#priority-queues" id="toc-priority-queues" class="nav-link" data-scroll-target="#priority-queues">2.2 Priority queues</a></li>
+  </ul></li>
+  <li><a href="#pa3-review" id="toc-pa3-review" class="nav-link" data-scroll-target="#pa3-review">3. PA3 review</a></li>
   </ul>
 </nav>
     </div>
@@ -193,35 +229,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Computational Crash Course for Economics PhD Students, Summer 2024 (UMN)</h1>
+<h1 class="title">Lesson 4</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Instructors</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Adam A. Oppenheimer <a href="mailto:oppen040@umn.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            University of Minnesota-Twin Cities
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Xing Xu <a href="mailto:xu000956@umn.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            University of Minnesota-Twin Cities
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
+    
   
     
   </div>
@@ -231,161 +246,173 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong><em>Disclaimer</em></strong>: this site is a work in progress!</p>
-<p>Welcome to the 2024 summer course on computational economics at UMN! It will be a 3-week crash course consisting of 2 Julia and 2 Python lectures each week. The Julia lectures will be taught by <strong><em>Xing Xu</em></strong> and the Python lectures will be taught by <strong><em>Adam Oppenheimer</em></strong>. Find the detailed syllabus and information below.</p>
-<p>All the notebooks for lectures and assignments can be downloaded from <a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io">Github repo</a>.</p>
-<section id="course-overview" class="level2">
-<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
-<p>The course offerings are designed to cater to varying interests and skill levels. The <a href="./Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">Julia lectures</a> will primarily concentrate on fundamental dynamic programming, demonstrating applications across a range of classical economic models. These include the neo-classical growth model, job search, the Aiyagari model, and firm dynamics. The homework will involve hands-on practice with basic Julia coding and provide exposure to some practical methods, including interpolation, continuous optimization, and parallelization. Lecture 5 on June 18th will feature <strong><em>Professor <a href="https://kimjruhl.com">Kim Ruhl</a></em></strong> as a guest lecturer to talk about the model part.</p>
-<p>In contrast, the <a href="./Python/Lectures/lecture1.html">Python lectures</a> are tailored to those new to programming. These sessions will focus on establishing a solid foundation in programming basics. Students will progressively build their skill set, and by the end of the course should be able to solve a simple dynamic programming model. For those who are new to programming, this will complement the Julia lectures by helping reinforce good coding practices that are necessary for the more complicated models covered in that course. On the other hand, those who are already experienced in programming can benefit from the focus on Python-specific subtleties that are required for highly optimized Python code.</p>
-<p>Both courses are structured as introductory, requiring no prior experience in programming. While the courses are comprehensive, they intentionally do not delve into advanced methodologies found at the cutting edge of computational economics. Such topics are reserved for the official computational field courses usually taken in the second year.</p>
-<p>It’s important to note that the skills developed in these classes are broadly applicable and will provide a strong foundation for those interested in advancing to more specialized computational sequences. However, students already familiar with basic or intermediate programming and computational economic skills may find some of the content less interesting. Thus, students equipped with those skills might prefer to direct their attention toward more advanced courses that align with their existing skill levels.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ol type="1">
+<li><p>Classes</p></li>
+<li><p>Queues</p></li>
+</ol>
+<ul>
+<li>Standard queues</li>
+<li>Priority queues</li>
+</ul>
+<ol start="3" type="1">
+<li>PA3 Review</li>
+</ol>
 </section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<p>The class will last three weeks from <strong><em>June 3rd - June 21st, 2024</em></strong>. The class will be online and zoom links will be provided to those who intend to participate. There will be 6 lectures and accompanying problem sets for each language.</p>
-<p>Here is the proposed timeline of the lectures. All lectures will be from 9:30 am - 11:00 am CDT.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Julia Lectures</th>
-<th>Dates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="./Julia/Lectures/Julia_Lec_1_Compecon_Xing_Xu.html">Julia Fundamentals</a></td>
-<td>Tuesday, June 4th</td>
-</tr>
-<tr class="even">
-<td><a href="./Julia/Lectures/Julia_Lec_2_Compecon_Xing_Xu.html">Neoclassical growth model (RBC)</a></td>
-<td>Thursday, June 6th</td>
-</tr>
-<tr class="odd">
-<td><a href="./Julia/Lectures/Julia_Lec_3_Compecon_Xing_Xu.html">Root finding, Interpolation, and Continuous optimization</a></td>
-<td>Tuesday, June 11th</td>
-</tr>
-<tr class="even">
-<td><a href="./Julia/Lectures/Julia_Lec_4_Compecon_Xing_Xu.html">Incomplete market model with heterogeneous household</a></td>
-<td>Thursday, June 13th</td>
-</tr>
-<tr class="odd">
-<td><a href="./Julia/Lectures/Julia_Lec_5_Compecon_Xing_Xu.html">Firm dynamics with an example of exporter dynamics</a> <strong><em>Guest Lecturer: Kim Ruhl</em></strong></td>
-<td>Tuesday, June 18th</td>
-</tr>
-<tr class="even">
-<td><a href="./Julia/Lectures/Julia_Lec_6_Compecon_Xing_Xu.html">McCall’s Job search model</a></td>
-<td>Thursday, June 20th</td>
-</tr>
-</tbody>
-</table>
-<p>(To get started with the Julia lectures, please set up with <a href="https://julia.quantecon.org/getting_started_julia/getting_started.html#">Quantecon tutorial</a>)</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Python Lectures</th>
-<th>Dates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture1.ipynb">Basics: Conditionals, Loops, Functions, etc.</a></td>
-<td>Monday, June 3rd</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture2.ipynb">Nesting, Scope, and Lists</a></td>
-<td>Wednesday, June 5th</td>
-</tr>
-<tr class="odd">
-<td>Assignment 1 Review</td>
-<td>Friday, June 7th</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture3.ipynb">Tips &amp; Tricks</a></td>
-<td>Monday, June 10th</td>
-</tr>
-<tr class="odd">
-<td>Assignment 2 Review</td>
-<td>Wednesday, June 12th</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/CompEconCrashCourse/CompEconCrashCourse.github.io/blob/main/Python/Lectures/lecture4.ipynb">Classes and Queues</a></td>
-<td>Friday, June 14th</td>
-</tr>
-<tr class="odd">
-<td>Numpy</td>
-<td>Monday, June 17th</td>
-</tr>
-<tr class="even">
-<td>Pandas</td>
-<td>Friday, June 21st</td>
-</tr>
-</tbody>
-</table>
+<section id="classes" class="level2">
+<h2 class="anchored" data-anchor-id="classes">1. Classes</h2>
+<p>An easy way to store and handle “related” data/variables</p>
+<ul>
+<li>Variables stored within a class are accessed using <code>.</code> and are called ‘attributes’</li>
+<li>Functions within a class are called ‘methods’ and must use <code>self</code> as the first argument</li>
+<li>The first method for a new class must be <code>__init__</code></li>
+</ul>
+<p>You could think of classes like a type of dictionary with fixed keys and pre-written functions that work with those keys (this is a simplification, but might help clarify how they work)</p>
+<div id="4e752420" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Student():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, first_name, last_name, middle_name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.first_name <span class="op">=</span> first_name</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.last_name <span class="op">=</span> last_name</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.middle_name <span class="op">=</span> middle_name</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> print_name(<span class="va">self</span>):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.middle_name <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="va">self</span>.first_name, <span class="va">self</span>.last_name)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="va">self</span>.first_name, <span class="va">self</span>.middle_name, <span class="va">self</span>.last_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Once a class is defined, we can create objects of the class, and call the class methods</p>
+<div id="9ff505c0" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>student1 <span class="op">=</span> Student(first_name<span class="op">=</span><span class="st">'Adam'</span>, middle_name<span class="op">=</span><span class="st">'Alexander'</span>, last_name<span class="op">=</span><span class="st">'Oppenheimer'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>student1.print_name()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Adam Alexander Oppenheimer</code></pre>
+</div>
+</div>
+<div id="ec2f7af2" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>student2 <span class="op">=</span> Student(first_name<span class="op">=</span><span class="st">'Yutong'</span>, last_name<span class="op">=</span><span class="st">'Zhong'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>student2.print_name()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Yutong Zhong</code></pre>
+</div>
+</div>
+<p>Class attributes can be directly accessed</p>
+<div id="92b1528a" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>student1.middle_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>'Alexander'</code></pre>
+</div>
+</div>
+<p>New class attributes can be defined</p>
+<div id="cabfdebc" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>student1.new_variable <span class="op">=</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="dd5727a0" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>student1.new_variable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>10</code></pre>
+</div>
+</div>
+<p>Classes can be nested - here, we nest the class <code>Student</code> inside a new class <code>Classroom</code></p>
+<div id="43b64cbc" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Classroom():</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, class_number):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.class_number <span class="op">=</span> class_number</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.students <span class="op">=</span> []</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add_student(<span class="va">self</span>, student):</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.students.append(student)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> sort_students(<span class="va">self</span>, order<span class="op">=</span><span class="st">'last_name'</span>):</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Notice: use class attributes `first_name` and `last_name`</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> order <span class="op">==</span> <span class="st">'last_name'</span>:</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.students <span class="op">=</span> <span class="bu">sorted</span>(<span class="va">self</span>.students, key<span class="op">=</span><span class="kw">lambda</span> a: a.last_name)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> order <span class="op">==</span> <span class="st">'first_name'</span>:</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.students <span class="op">=</span> <span class="bu">sorted</span>(<span class="va">self</span>.students, key<span class="op">=</span><span class="kw">lambda</span> a: a.first_name)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="bu">print</span>(<span class="va">self</span>):</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Notice: use class method `.print_name()`</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Class number:'</span>, <span class="va">self</span>.class_number)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Students:'</span>)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> student <span class="kw">in</span> <span class="va">self</span>.students:</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>            student.print_name()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="1cc8a2b7" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>python_course <span class="op">=</span> Classroom(<span class="dv">1</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>python_course.add_student(student2)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>python_course.add_student(student1)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>python_course.<span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Class number: 1
+Students:
+Yutong Zhong
+Adam Alexander Oppenheimer</code></pre>
+</div>
+</div>
+<div id="5352f9e4" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>python_course.sort_students()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>python_course.<span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Class number: 1
+Students:
+Adam Alexander Oppenheimer
+Yutong Zhong</code></pre>
+</div>
+</div>
 </section>
-<section id="office-hours" class="level2">
-<h2 class="anchored" data-anchor-id="office-hours">Office Hours</h2>
-<p>We will provide links to sign up for weekly office hours.</p>
+<section id="queues" class="level2">
+<h2 class="anchored" data-anchor-id="queues">2. Queues</h2>
+<p>An ordered list where variables are added then removed</p>
+<section id="standard-queues" class="level3">
+<h3 class="anchored" data-anchor-id="standard-queues">2.1 Standard queues</h3>
+<p>What goes in first comes out first</p>
+<div id="746aa936" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> queue</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> queue.Queue()</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>a.put(<span class="dv">1</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>a.put(<span class="dv">3</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>a.put(<span class="dv">2</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.get())</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.get())</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.get())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+3
+2</code></pre>
+</div>
+</div>
+<p>Calling <code>.get()</code> on an empty queue causes the code to hang</p>
+<div id="6e4ed203" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>a.get()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>KeyboardInterrupt: </code></pre>
+</div>
+</div>
 </section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<p>Here are the links to the assignments:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Julia Assignments</th>
-<th>Due Dates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="./Julia/Assignments/Julia_PS_1_Compecon_Xing_Xu.html">Assignment 1</a></td>
-<td>June 10th</td>
-</tr>
-<tr class="even">
-<td><a href="./Julia/Assignments/Julia_PS_2_Compecon_Xing_Xu.html">Assignment 2</a></td>
-<td>June 17th</td>
-</tr>
-<tr class="odd">
-<td>Assignment 3</td>
-<td>June 24th</td>
-</tr>
-</tbody>
-</table>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Python Assignments</th>
-<th>Due Dates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa1/index.html">Assignment 1</a></td>
-<td>Friday, June 7th</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa2/index.html">Assignment 2</a></td>
-<td>Wednesday, June 12th</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa3/index.html">Assignment 3</a></td>
-<td>Monday, June 17th</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa4/index.html">Assignment 4</a></td>
-<td>Monday, June 24th</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.classes.cs.uchicago.edu/archive/2019/fall/12100-1/pa/pa5/index.html">Assignment 5</a></td>
-<td>Friday, June 28th</td>
-</tr>
-<tr class="even">
-<td>Assignment 6</td>
-<td>Monday, July 1st</td>
-</tr>
-</tbody>
-</table>
+<section id="priority-queues" class="level3">
+<h3 class="anchored" data-anchor-id="priority-queues">2.2 Priority queues</h3>
+<p>Order based on some ranking (often the first element of a tuple). Read more about them for PA4.</p>
+<div id="67c227d3" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> queue.PriorityQueue()</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>b.put((<span class="dv">1</span>, <span class="st">'hello'</span>))</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>b.put((<span class="dv">3</span>, <span class="st">'goodbye'</span>))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>b.put((<span class="dv">2</span>, <span class="st">'waiting'</span>))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b.get())</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b.get())</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b.get())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(1, 'hello')
+(2, 'waiting')
+(3, 'goodbye')</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="pa3-review" class="level2">
+<h2 class="anchored" data-anchor-id="pa3-review">3. PA3 review</h2>
+<p>Discussion and review my solution</p>
 
 
 </section>
