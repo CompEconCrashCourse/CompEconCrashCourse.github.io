@@ -34,6 +34,8 @@ website:
             href: Python/Lectures/lecture4.ipynb
           - text: "Lecture 5"
             href: Python/Lectures/lecture5.ipynb
+          - text: "Lecture 6"
+            href: Python/Lectures/lecture6.ipynb
       - text: Julia Assignments
         menu: 
           - text: "Assignment 1"
